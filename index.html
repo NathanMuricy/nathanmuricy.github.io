@@ -1,1067 +1,1798 @@
-<!DOCTYPE html><html class="dark stitch-anim-fade-in" lang="pt-BR" style="scroll-behavior: smooth;"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
-@keyframes laserScan {
-  0% { top: 0%; opacity: 0.8; }
-  50% { opacity: 1; }
-  100% { top: 96%; opacity: 0.8; }
-}
-.laser-scan-bar {
-  animation: laserScan 2s ease-in-out infinite alternate;
-}
-@keyframes brandFloat {
-  0%, 100% { transform: translateY(0px) scale(1.03) rotate(0deg); }
-  50% { transform: translateY(-6px) scale(1.06) rotate(0.8deg); }
-}
-.brand-animated-motion {
-  animation: brandFloat 2.4s ease-in-out infinite;
-}
-@keyframes gearSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-.spin-slow {
-  animation: gearSpin 8s linear infinite;
-}
-</style><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        "colors": {
-          "primary-fixed-dim": "#cbbeff",
-          "surface-dim": "#16083b",
-          "outline": "#938f9b",
-          "inverse-on-surface": "#33285a",
-          "on-surface-variant": "#cac4d2",
-          "inverse-surface": "#e7deff",
-          "secondary": "#ffb1c7",
-          "surface-container-highest": "#382d5e",
-          "surface-variant": "#382d5e",
-          "on-secondary-fixed": "#3f001c",
-          "error": "#ffb4ab",
-          "on-tertiary-fixed-variant": "#4c4800",
-          "primary-fixed": "#e7deff",
-          "on-secondary-fixed-variant": "#831f48",
-          "surface": "#16083b",
-          "on-background": "#e7deff",
-          "surface-bright": "#3c3163",
-          "on-error-container": "#ffdad6",
-          "primary": "#cbbeff",
-          "background": "#16083b",
-          "on-secondary": "#640231",
-          "tertiary-fixed-dim": "#d5cb00",
-          "outline-variant": "#484550",
-          "tertiary": "#d5cb00",
-          "surface-container-lowest": "#100336",
-          "tertiary-container": "#b8af00",
-          "surface-container": "#221748",
-          "on-tertiary-fixed": "#1e1c00",
-          "inverse-primary": "#62539d",
-          "on-primary": "#33236c",
-          "on-error": "#690005",
-          "secondary-fixed": "#ffd9e2",
-          "on-primary-fixed-variant": "#4a3b84",
-          "surface-tint": "#cbbeff",
-          "secondary-container": "#86214a",
-          "tertiary-fixed": "#f3e700",
-          "on-tertiary-container": "#454100",
-          "on-secondary-container": "#ff9bb9",
-          "surface-container-high": "#2d2253",
-          "on-surface": "#e7deff",
-          "secondary-fixed-dim": "#ffb1c7",
-          "error-container": "#93000a",
-          "on-primary-fixed": "#1e0857",
-          "on-primary-container": "#c0b0ff",
-          "primary-container": "#4e3f88",
-          "surface-container-low": "#1e1243",
-          "on-tertiary": "#353200"
+<!DOCTYPE html>
+<html class="dark stitch-anim-fade-in" lang="pt-BR" style="scroll-behavior: smooth;">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet">
+  <style>
+    @layer base {
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        overscroll-behavior: none;
+      }
+
+      main>:first-child {
+        margin-top: 0 !important;
+      }
+
+      main>:last-child {
+        margin-bottom: 0 !important;
+      }
+    }
+
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    @keyframes laserScan {
+      0% {
+        top: 0%;
+        opacity: 0.8;
+      }
+
+      50% {
+        opacity: 1;
+      }
+
+      100% {
+        top: 96%;
+        opacity: 0.8;
+      }
+    }
+
+    .laser-scan-bar {
+      animation: laserScan 2s ease-in-out infinite alternate;
+    }
+
+    @keyframes brandFloat {
+
+      0%,
+      100% {
+        transform: translateY(0px) scale(1.03) rotate(0deg);
+      }
+
+      50% {
+        transform: translateY(-6px) scale(1.06) rotate(0.8deg);
+      }
+    }
+
+    .brand-animated-motion {
+      animation: brandFloat 2.4s ease-in-out infinite;
+    }
+
+    @keyframes gearSpin {
+      0% {
+        transform: rotate(0deg);
+      }
+
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    .spin-slow {
+      animation: gearSpin 8s linear infinite;
+    }
+  </style>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config">tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "primary-fixed-dim": "#cbbeff",
+            "surface-dim": "#16083b",
+            "outline": "#938f9b",
+            "inverse-on-surface": "#33285a",
+            "on-surface-variant": "#cac4d2",
+            "inverse-surface": "#e7deff",
+            "secondary": "#ffb1c7",
+            "surface-container-highest": "#382d5e",
+            "surface-variant": "#382d5e",
+            "on-secondary-fixed": "#3f001c",
+            "error": "#ffb4ab",
+            "on-tertiary-fixed-variant": "#4c4800",
+            "primary-fixed": "#e7deff",
+            "on-secondary-fixed-variant": "#831f48",
+            "surface": "#16083b",
+            "on-background": "#e7deff",
+            "surface-bright": "#3c3163",
+            "on-error-container": "#ffdad6",
+            "primary": "#cbbeff",
+            "background": "#16083b",
+            "on-secondary": "#640231",
+            "tertiary-fixed-dim": "#d5cb00",
+            "outline-variant": "#484550",
+            "tertiary": "#d5cb00",
+            "surface-container-lowest": "#100336",
+            "tertiary-container": "#b8af00",
+            "surface-container": "#221748",
+            "on-tertiary-fixed": "#1e1c00",
+            "inverse-primary": "#62539d",
+            "on-primary": "#33236c",
+            "on-error": "#690005",
+            "secondary-fixed": "#ffd9e2",
+            "on-primary-fixed-variant": "#4a3b84",
+            "surface-tint": "#cbbeff",
+            "secondary-container": "#86214a",
+            "tertiary-fixed": "#f3e700",
+            "on-tertiary-container": "#454100",
+            "on-secondary-container": "#ff9bb9",
+            "surface-container-high": "#2d2253",
+            "on-surface": "#e7deff",
+            "secondary-fixed-dim": "#ffb1c7",
+            "error-container": "#93000a",
+            "on-primary-fixed": "#1e0857",
+            "on-primary-container": "#c0b0ff",
+            "primary-container": "#4e3f88",
+            "surface-container-low": "#1e1243",
+            "on-tertiary": "#353200"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.125rem",
+            "lg": "0.25rem",
+            "xl": "0.5rem",
+            "full": "0.75rem"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "margin-mobile": "1.25rem",
+            "space-md": "1rem",
+            "gutter-mobile": "1rem",
+            "margin": "3rem",
+            "space-sm": "0.5rem",
+            "space-xl": "2.5rem",
+            "space-lg": "1.5rem",
+            "space-xs": "0.25rem"
+          },
+          "fontFamily": {
+            "headline-sm": [
+              "Bebas Neue"
+            ],
+            "body-sm": [
+              "Open Sans"
+            ],
+            "headline-lg": [
+              "Bebas Neue"
+            ],
+            "headline-lg-mobile": [
+              "Bebas Neue"
+            ],
+            "display-hero": [
+              "Bebas Neue"
+            ],
+            "body-lg": [
+              "Open Sans"
+            ],
+            "display-hero-mobile": [
+              "Bebas Neue"
+            ],
+            "body-md": [
+              "Open Sans"
+            ],
+            "label-sm": [
+              "Open Sans"
+            ],
+            "label-md": [
+              "Open Sans"
+            ],
+            "headline-md": [
+              "Bebas Neue"
+            ],
+            "title-lg": [
+              "Open Sans"
+            ]
+          },
+          "fontSize": {
+            "headline-sm": [
+              "24px",
+              {
+                "lineHeight": "28px",
+                "letterSpacing": "0.03em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-sm": [
+              "14px",
+              {
+                "lineHeight": "20px",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg": [
+              "64px",
+              {
+                "lineHeight": "64px",
+                "letterSpacing": "0.03em",
+                "fontWeight": "400"
+              }
+            ],
+            "headline-lg-mobile": [
+              "40px",
+              {
+                "lineHeight": "42px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero": [
+              "96px",
+              {
+                "lineHeight": "92px",
+                "letterSpacing": "0.04em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-lg": [
+              "18px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "400"
+              }
+            ],
+            "display-hero-mobile": [
+              "56px",
+              {
+                "lineHeight": "56px",
+                "letterSpacing": "0.03em",
+                "fontWeight": "400"
+              }
+            ],
+            "body-md": [
+              "16px",
+              {
+                "lineHeight": "24px",
+                "fontWeight": "400"
+              }
+            ],
+            "label-sm": [
+              "11px",
+              {
+                "lineHeight": "14px",
+                "letterSpacing": "0.06em",
+                "fontWeight": "600"
+              }
+            ],
+            "label-md": [
+              "12px",
+              {
+                "lineHeight": "16px",
+                "letterSpacing": "0.08em",
+                "fontWeight": "700"
+              }
+            ],
+            "headline-md": [
+              "36px",
+              {
+                "lineHeight": "38px",
+                "letterSpacing": "0.02em",
+                "fontWeight": "400"
+              }
+            ],
+            "title-lg": [
+              "20px",
+              {
+                "lineHeight": "28px",
+                "fontWeight": "700"
+              }
+            ]
+          }
         },
-        "borderRadius": {
-          "DEFAULT": "0.125rem",
-          "lg": "0.25rem",
-          "xl": "0.5rem",
-          "full": "0.75rem"
-        },
-        "spacing": {
-          "gutter": "1.5rem",
-          "margin-mobile": "1.25rem",
-          "space-md": "1rem",
-          "gutter-mobile": "1rem",
-          "margin": "3rem",
-          "space-sm": "0.5rem",
-          "space-xl": "2.5rem",
-          "space-lg": "1.5rem",
-          "space-xs": "0.25rem"
-        },
-        "fontFamily": {
-          "headline-sm": [
-            "Bebas Neue"
-          ],
-          "body-sm": [
-            "Open Sans"
-          ],
-          "headline-lg": [
-            "Bebas Neue"
-          ],
-          "headline-lg-mobile": [
-            "Bebas Neue"
-          ],
-          "display-hero": [
-            "Bebas Neue"
-          ],
-          "body-lg": [
-            "Open Sans"
-          ],
-          "display-hero-mobile": [
-            "Bebas Neue"
-          ],
-          "body-md": [
-            "Open Sans"
-          ],
-          "label-sm": [
-            "Open Sans"
-          ],
-          "label-md": [
-            "Open Sans"
-          ],
-          "headline-md": [
-            "Bebas Neue"
-          ],
-          "title-lg": [
-            "Open Sans"
-          ]
-        },
-        "fontSize": {
-          "headline-sm": [
-            "24px",
-            {
-              "lineHeight": "28px",
-              "letterSpacing": "0.03em",
-              "fontWeight": "400"
-            }
-          ],
-          "body-sm": [
-            "14px",
-            {
-              "lineHeight": "20px",
-              "fontWeight": "400"
-            }
-          ],
-          "headline-lg": [
-            "64px",
-            {
-              "lineHeight": "64px",
-              "letterSpacing": "0.03em",
-              "fontWeight": "400"
-            }
-          ],
-          "headline-lg-mobile": [
-            "40px",
-            {
-              "lineHeight": "42px",
-              "letterSpacing": "0.02em",
-              "fontWeight": "400"
-            }
-          ],
-          "display-hero": [
-            "96px",
-            {
-              "lineHeight": "92px",
-              "letterSpacing": "0.04em",
-              "fontWeight": "400"
-            }
-          ],
-          "body-lg": [
-            "18px",
-            {
-              "lineHeight": "28px",
-              "fontWeight": "400"
-            }
-          ],
-          "display-hero-mobile": [
-            "56px",
-            {
-              "lineHeight": "56px",
-              "letterSpacing": "0.03em",
-              "fontWeight": "400"
-            }
-          ],
-          "body-md": [
-            "16px",
-            {
-              "lineHeight": "24px",
-              "fontWeight": "400"
-            }
-          ],
-          "label-sm": [
-            "11px",
-            {
-              "lineHeight": "14px",
-              "letterSpacing": "0.06em",
-              "fontWeight": "600"
-            }
-          ],
-          "label-md": [
-            "12px",
-            {
-              "lineHeight": "16px",
-              "letterSpacing": "0.08em",
-              "fontWeight": "700"
-            }
-          ],
-          "headline-md": [
-            "36px",
-            {
-              "lineHeight": "38px",
-              "letterSpacing": "0.02em",
-              "fontWeight": "400"
-            }
-          ],
-          "title-lg": [
-            "20px",
-            {
-              "lineHeight": "28px",
-              "fontWeight": "700"
-            }
-          ]
-        }
       },
-    },
-  }</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-tertiary selection:text-on-tertiary">
-    <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm shrink-0"><div class="p-space-xs bg-surface-container-high rounded-full shadow-[2px_2px_0px_#100336]">
-      <img alt="Nathan Muricy Logo" class="w-8 h-8 rounded-full object-contain" src="index/logo.png"></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface leading-none">Nathan Muricy</span><span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-tight">Design &amp; Code</span></div></div><nav class="hidden xl:flex items-center gap-space-sm" data-active-classes="text-tertiary bg-surface-container-high"><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors" data-path="inicio" href="#">Início</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors" data-path="projetos" href="#projetos">Projetos &amp; portifolio</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors" data-path="identidade-marca" href="#identidade-marca">Apresentação</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors" data-path="sobre-habilidades" href="#sobre">Sobre &amp; Habilidades</a><a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors" data-path="contato" href="#contato">Contato</a></nav>
-      <div class="flex items-center gap-space-sm shrink-0"><a aria-label="GitHub Repository" class="p-space-xs text-on-surface-variant hover:text-tertiary transition-colors flex items-center justify-center" href="https://github.com/NathanMuricy" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" fill-rule="evenodd"></path></svg></a><a aria-label="Behance" class="p-space-xs text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center" href="https://www.behance.net/nathanmuricy" rel="noopener noreferrer" target="_blank" title="Behance / Portfólio de Design"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"><circle cx="13.5" cy="6.5" fill="currentColor" r=".5"></circle><circle cx="17.5" cy="10.5" fill="currentColor" r=".5"></circle><circle cx="8.5" cy="7.5" fill="currentColor" r=".5"></circle><circle cx="6.5" cy="12.5" fill="currentColor" r=".5"></circle><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"></path></svg></a><a class="inline-flex items-center justify-center px-space-md py-space-xs bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#100336] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all" data-path="contato" href="#contato">Fale Comigo</a></div></div></header><main class="w-full pt-20 bg-surface"><div class="flex flex-col w-full">
-<!-- Modal Alerta de Projeto em Desenvolvimento -->
-<div aria-labelledby="dev-modal-title" aria-modal="true" class="fixed inset-0 z-[10000] items-center justify-center p-4 transition-all duration-300 hidden" id="dev-alert-modal" role="dialog">
-<!-- Backdrop escurecido com Blur Neo-Brutalista -->
-<div class="fixed inset-0 bg-[#100336]/80 backdrop-blur-md transition-opacity cursor-pointer" onclick="closeDevAlert()"></div>
-<!-- Container do Modal com Design System de Nathan Muricy -->
-<div class="relative w-full max-w-xl bg-surface-container-low border-2 border-[#4e3f88] shadow-[10px_10px_0px_#100336] p-space-md md:p-space-lg text-on-surface z-10 transition-transform duration-300 transform scale-95 opacity-0" id="dev-modal-card">
-<!-- Top Terminal Bar com Status e Fechar -->
-<div class="flex items-center justify-between pb-space-sm border-b border-[#4e3f88]/60 mb-space-md">
-<div class="flex items-center gap-2">
-<span class="w-3 h-3 rounded-full bg-secondary"></span>
-<span class="w-3 h-3 rounded-full bg-tertiary"></span>
-<span class="w-3 h-3 rounded-full bg-primary"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-[#f5e900] font-bold ml-1.5 flex items-center gap-1">
-<span class="inline-block w-2 h-2 rounded-full bg-[#f5e900] animate-ping"></span>
-STATUS: EM DESENVOLVIMENTO
-</span>
-</div>
-<button aria-label="Fechar Modal" class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-colors rounded-DEFAULT flex items-center justify-center" onclick="closeDevAlert()">
-<span class="material-symbols-outlined text-[24px]">close</span>
-</button>
-</div>
-<!-- Header do Conteúdo: Ícone + Títulos -->
-<div class="flex flex-col sm:flex-row items-start gap-space-md mb-space-md">
-<div class="p-space-sm bg-surface-container-lowest border-2 border-[#f5e900] shadow-[3px_3px_0px_#100336] text-[#f5e900] flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[36px] spin-slow">construction</span>
-</div>
-<div class="flex flex-col">
-<div class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm uppercase tracking-widest font-bold mb-1">
-<span class="material-symbols-outlined text-[16px]">terminal</span>
-<span class="" id="dev-modal-project-name">PREÇO CERTO • CRIAÇÃO DE APLICATIVO PARA TCC</span>
-</div>
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider leading-none" id="dev-modal-title">
-PROJETO EM DESENVOLVIMENTO
-</h3>
-</div>
-</div>
-<!-- Corpo Explicativo -->
-<div class="space-y-space-sm bg-surface-container p-space-md border border-[#4e3f88]/50 shadow-[inset_2px_2px_0px_#100336] mb-space-lg">
-<p class="font-body-md text-body-md text-on-surface leading-relaxed">
-Este projeto está atualmente na fase de concepção, prototipagem ou desenvolvimento técnico ativo. Por enquanto, a documentação pública, o repositório ou o case online ainda não possuem link disponível.
-</p>
-<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-2 border-t border-[#4e3f88]/40">
-Você pode acompanhar novidades em breve pelo <strong class="text-tertiary">GitHub</strong> ou <strong class="text-secondary">Behance</strong>, ou solicitar uma apresentação prévia pelo formulário de contato.
-</p>
-</div>
-<!-- Botões de Ação -->
-<div class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-space-sm pt-space-xs">
-<a class="inline-flex items-center justify-center gap-1.5 px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md uppercase tracking-wider shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-[1px] active:translate-y-[1px] transition-all" href="#contato" onclick="goToContactFromDevModal()">
-<span class="material-symbols-outlined text-[18px] text-secondary">mail</span>
-<span class="">Falar com Nathan</span>
-</a>
-<button class="inline-flex items-center justify-center gap-1.5 px-space-lg py-space-xs bg-[#f5e900] text-[#1e1c00] font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-[1px] active:translate-y-[1px] hover:shadow-[5px_5px_0px_#100336] transition-all font-bold" onclick="closeDevAlert()">
-<span class="">Entendi</span>
-<span class="material-symbols-outlined text-[20px]">check</span>
-</button>
-</div>
-</div>
-</div>
-<!-- Toast Notification System -->
-<div class="fixed bottom-6 right-6 z-[9999] transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-sm px-space-md py-space-sm bg-tertiary text-on-tertiary shadow-[4px_4px_0px_#100336] rounded-DEFAULT max-w-md" id="toast">
-<span class="material-symbols-outlined text-[20px] shrink-0" id="toast-icon">check_circle</span>
-<span class="font-label-md text-label-md tracking-wider uppercase font-bold" id="toast-msg">Notificação</span>
-</div>
-<!-- HERO SECTION -->
-<section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-24" id="hero">
-<!-- Ambient Neo-Brutalist Grid Decorative Elements -->
-<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#cbbeff_1px,transparent_1px)] [background-size:24px_24px]"></div>
-<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin relative z-10">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
-<!-- Hero Content Column -->
-<div class="lg:col-span-7 flex flex-col gap-space-md">
-<!-- Availability Badge -->
-<div class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high w-fit rounded-DEFAULT shadow-[2px_2px_0px_#100336]">
-<span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Disponível para novos projetos • Freelance &amp; Tech</span>
-</div>
-<!-- Main Impact Title -->
-<div class="flex flex-col">
-<h1 class="font-display-hero text-display-hero uppercase text-on-surface tracking-wider leading-none">
-              NATHAN MURICY
-            </h1>
-<div class="flex flex-wrap items-center gap-x-space-sm gap-y-1 mt-2">
-<span class="font-headline-md text-headline-md uppercase text-secondary tracking-wide">
-                DESIGN GRÁFICO
+    }</script>
+</head>
+
+<body
+  class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-tertiary selection:text-on-tertiary">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.4)]">
+    <div
+      class="h-20 max-w-[1280px] mx-auto px-margin-mobile lg:px-margin flex items-center justify-between gap-space-md">
+      <div class="flex items-center gap-space-sm shrink-0">
+        <div class="p-space-xs bg-surface-container-high rounded-full shadow-[2px_2px_0px_#100336]">
+          <img alt="Nathan Muricy Logo" class="w-8 h-8 rounded-full object-contain" src="assets/logo.png">
+        </div>
+        <div class="flex flex-col"><span
+            class="font-headline-sm text-headline-sm uppercase tracking-wider text-on-surface leading-none">Nathan
+            Muricy</span><span
+            class="font-label-sm text-label-sm text-secondary uppercase tracking-widest leading-tight">Design &amp;
+            Code</span></div>
+      </div>
+      <nav class="hidden xl:flex items-center gap-space-sm"
+        data-active-classes="text-tertiary bg-surface-container-high"><a
+          class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors"
+          data-path="inicio" href="#">Início</a><a
+          class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors"
+          data-path="projetos" href="#projetos">Projetos &amp; portifolio</a><a
+          class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors"
+          data-path="identidade-marca" href="#identidade-marca">Apresentação</a><a
+          class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors"
+          data-path="sobre-habilidades" href="#sobre">Sobre &amp; Habilidades</a><a
+          class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant hover:text-on-surface px-space-sm py-space-xs rounded transition-colors"
+          data-path="contato" href="#contato">Contato</a></nav>
+      <div class="flex items-center gap-space-sm shrink-0"><a aria-label="GitHub Repository"
+          class="p-space-xs text-on-surface-variant hover:text-tertiary transition-colors flex items-center justify-center"
+          href="https://github.com/NathanMuricy" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true"
+            class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            <path clip-rule="evenodd"
+              d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              fill-rule="evenodd"></path>
+          </svg></a><a aria-label="Behance"
+          class="p-space-xs text-on-surface-variant hover:text-secondary transition-colors flex items-center justify-center"
+          href="https://www.behance.net/nathanmuricy" rel="noopener noreferrer" target="_blank"
+          title="Behance / Portfólio de Design"><svg class="w-5 h-5" fill="none" stroke="currentColor"
+            stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+            <circle cx="13.5" cy="6.5" fill="currentColor" r=".5"></circle>
+            <circle cx="17.5" cy="10.5" fill="currentColor" r=".5"></circle>
+            <circle cx="8.5" cy="7.5" fill="currentColor" r=".5"></circle>
+            <circle cx="6.5" cy="12.5" fill="currentColor" r=".5"></circle>
+            <path
+              d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+            </path>
+          </svg></a><a
+          class="inline-flex items-center justify-center px-space-md py-space-xs bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[4px_4px_0px_#100336] active:translate-x-[1px] active:translate-y-[1px] active:shadow-none transition-all"
+          data-path="contato" href="#contato">Fale Comigo</a></div>
+    </div>
+  </header>
+  <main class="w-full pt-20 bg-surface">
+    <div class="flex flex-col w-full">
+      <!-- Modal Alerta de Projeto em Desenvolvimento -->
+      <div aria-labelledby="dev-modal-title" aria-modal="true"
+        class="fixed inset-0 z-[10000] items-center justify-center p-4 transition-all duration-300 hidden"
+        id="dev-alert-modal" role="dialog">
+        <!-- Backdrop escurecido com Blur Neo-Brutalista -->
+        <div class="fixed inset-0 bg-[#100336]/80 backdrop-blur-md transition-opacity cursor-pointer"
+          onclick="closeDevAlert()"></div>
+        <!-- Container do Modal com Design System de Nathan Muricy -->
+        <div
+          class="relative w-full max-w-xl bg-surface-container-low border-2 border-[#4e3f88] shadow-[10px_10px_0px_#100336] p-space-md md:p-space-lg text-on-surface z-10 transition-transform duration-300 transform scale-95 opacity-0"
+          id="dev-modal-card">
+          <!-- Top Terminal Bar com Status e Fechar -->
+          <div class="flex items-center justify-between pb-space-sm border-b border-[#4e3f88]/60 mb-space-md">
+            <div class="flex items-center gap-2">
+              <span class="w-3 h-3 rounded-full bg-secondary"></span>
+              <span class="w-3 h-3 rounded-full bg-tertiary"></span>
+              <span class="w-3 h-3 rounded-full bg-primary"></span>
+              <span
+                class="font-label-sm text-label-sm uppercase tracking-widest text-[#f5e900] font-bold ml-1.5 flex items-center gap-1">
+                <span class="inline-block w-2 h-2 rounded-full bg-[#f5e900] animate-ping"></span>
+                STATUS: EM DESENVOLVIMENTO
               </span>
-<span class="font-headline-md text-headline-md text-tertiary">&amp;</span>
-<span class="font-headline-md text-headline-md uppercase text-primary tracking-wide">
-                DESENVOLVIMENTO de sistema</span>
-</div>
-</div>
-<!-- High-Contrast Tagline / Manifesto -->
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">Desenvolvimento de sistemas de alta performance e identidades visuais de excelência. Unindo rigor arquitetural, interfaces fluidas e design estratégico para transformar ideias em experiências digitais memoráveis.</p>
-<!-- CTAs & Fast Actions -->
-<div class="flex flex-wrap items-center gap-space-md pt-space-sm">
-<a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#100336] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" href="#projetos">
-<span class="">Explorar Projetos</span>
-<span class="material-symbols-outlined text-[20px]">arrow_downward</span>
-</a>
-<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm bg-secondary text-on-secondary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#100336] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" href="#contato">
-<span class="">Falar Comigo</span>
-<span class="material-symbols-outlined text-[20px]">mail</span>
-</a>
-
-</div>
-</div>
-<!-- Hero Graphic & Emblem Box (Increased prominent size + Continuous Autoplay Video with 10s Pause Loop) -->
-<div class="lg:col-span-5 flex justify-center lg:justify-end">
-<div class="group/hero-video relative w-full max-w-[430px] bg-surface-container-low p-space-md shadow-[10px_10px_0px_#100336] rounded-DEFAULT border border-surface-variant transition-all duration-300 hover:shadow-[14px_14px_0px_#100336]" id="hero-logo-box">
-<!-- Terminal Header & Status Indicator -->
-<div class="flex items-center justify-between pb-space-sm border-b border-surface-variant/70 mb-space-sm">
-<div class="flex items-center gap-1.5">
-<span class="w-3 h-3 rounded-full bg-secondary" id="hero-led-1"></span>
-<span class="w-3 h-3 rounded-full bg-primary" id="hero-led-2"></span>
-<span class="w-3 h-3 rounded-full bg-tertiary" id="hero-led-3"></span>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold ml-1" id="hero-status-tag">STATUS: REPRODUZINDO</span>
-</div>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">SYS.ID // NM-2025</span>
-</div>
-<!-- Official Interactive Logo / Video Display Screen -->
-<div class="relative w-full aspect-square bg-[#f6f4f0] rounded-DEFAULT p-space-sm overflow-hidden shadow-[inset_0_3px_6px_rgba(0,0,0,0.35)] flex items-center justify-center select-none" id="hero-screen-frame">
-<!-- Ambient Scanline Overlay -->
-<div class="absolute inset-0 pointer-events-none opacity-40 z-20 bg-gradient-to-b from-transparent via-[#e97099]/10 to-transparent"></div>
-<div class="laser-scan-bar absolute left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5e900] to-transparent shadow-[0_0_8px_#f5e900] opacity-80 z-30 pointer-events-none transition-opacity duration-200" id="hero-laser-scan" style="opacity: 0.8;"></div>
-<!-- Live / Repouso State Indicator -->
-<div class="absolute top-3 right-3 z-30 flex items-center gap-1.5 px-space-xs py-0.5 bg-surface-container-lowest/90 border border-secondary text-secondary shadow-[2px_2px_0px_#100336] transition-colors" id="hero-live-badge">
-<span class="w-2 h-2 rounded-full bg-secondary animate-ping" id="hero-live-dot"></span>
-<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider" id="hero-live-text">REPRODUZINDO</span>
-</div>
-<!-- Video Element (Autoplay muted playsinline with 10s ended timeout loop) -->
-<video autoplay="" class="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition-all duration-500 ease-out z-10" id="hero-brand-video" muted="" playsinline="" poster="index/perfilEstatico.jpeg" preload="auto">
-<source src="index/perfilVideo.mp4" type="video/mp4">
-<img alt="Nathan Muricy - Marca Animada &amp; Identidade Oficial" class="w-full h-full object-contain filter drop-shadow-[0_6px_16px_rgba(0,0,0,0.2)] brand-animated-motion" id="hero-logo-img" src="index/perfilEstatico.jpeg">
-</video>
-</div>
-<!-- Meta Data Strip & Autoplay Indicator Controls Bar -->
-<div class="mt-space-sm p-space-xs bg-surface-container flex items-center justify-between border-t border-surface-variant">
-<div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
-<span class="material-symbols-outlined text-[16px] text-tertiary animate-spin" id="hero-playback-icon" style="animation-duration: 4s;">sync</span>
-<span class="uppercase tracking-wider font-bold text-on-surface" id="hero-playback-caption">REPRODUÇÃO AUTOMÁTICA // INTERVALO 10S</span>
-</div>
-<div class="flex items-center gap-2">
-<span class="font-label-sm text-label-sm text-outline uppercase tracking-wider" id="hero-timer-display">LOOP: 10S</span>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-
-<!-- Seção de Projetos e portifolio -->
- <!--titulo + divisões-->
-  <section class="w-full py-24 lg:py-24 bg-surface-container-lowest border-t border-surface-variant relative shadow-[8px_8px_0px_#100336]" id="projetos"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin"><div class="flex flex-col md:flex-row md:items-end justify-between pb-space-xl gap-space-md"><div><div class="flex items-center gap-space-xs">
-  <span class="w-3 h-3 bg-primary"></span><span class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold">01 // TRABALHOS SELECIONADOS • VITRINE PRINCIPAL</span></div><h2 class="font-display-hero text-display-hero uppercase text-on-surface tracking-wider mt-space-xs leading-none">PROJETOS &amp; PORTFÓLIO</h2></div><div class="flex flex-row items-center gap-space-xs overflow-hidden" id="portfolio-filters"><button class="filter-btn px-space-md py-1 font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-tertiary text-on-tertiary" data-filter="all">Todos (5)
-  </button><button class="filter-btn px-space-md py-1 hover:text-secondary font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-surface-container text-on-surface" data-filter="design">Design Gráfico</button><button class="filter-btn active-filter px-space-md py-1 hover:text-tertiary font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-surface-container text-on-surface" data-filter="frontend">Programação</button><button class="filter-btn px-space-md py-1 hover:text-primary font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-surface-container text-on-surface" data-filter="branding">UI/UX &amp; Branding</button></div>
-  </div>
-
-  <!--Primeiro projeto-->
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="portfolio-grid"><article class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant" 
-  data-category="design branding" style="display: flex; opacity: 1;"><div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest"><img alt="Nathan Muricy Studio - Mockup 3D na parede de madeira" class="w-full h-full bg-[#f6f4f0] transition-transform duration-500 group-hover:scale-105 object-cover" src="index/portifolio1.jpg"><div class="absolute top-2 left-2 px-space-sm py-1 bg-secondary text-[#3f001c] font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">Design Gráfico</div>
-  <div class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">2024</div></div>
-  <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"><div><h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-secondary transition-colors leading-tight">NATHAN MURICY STUDIO • CRIAÇÃO DE iDENTIDADE VISUAL</h3><p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Criação de uma identidade visual para uso próprio profissional e apresentação.</p></div>
-  <div><div class="flex flex-wrap gap-1.5 mb-space-md"><span class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Illustrator</span><span class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Photoshop</span><span class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Mockups</span></div><div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><a class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-secondary text-on-secondary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all" href="https://www.behance.net/gallery/208478769/ID-Nathan-Muricy" rel="noopener noreferrer" target="_blank"><span class="">Ver no Behance</span><span class="material-symbols-outlined text-[16px]">arrow_outward</span>
-  </a><span class="font-label-md text-label-md text-outline uppercase">Identidade visual</span></div></div></div></article>
-  
-  <!--Segundo projeto-->
-  <article class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant" data-category="frontend branding" style="display: flex; opacity: 1;">
-  <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest"><img alt="Biblioteca Contemporânea - Projeto Java Spring Boot" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Futuristic neo-brutalist financial dashboard web application interface with neon yellow data graphs, dark mode background, high contrast typography and clean modular widgets" src="index/portifolio2.jpg">
-  <div class="absolute top-2 left-2 px-space-sm py-1 bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">Programação</div><div class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">2025</div></div>
-  <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"><div><h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-tertiary transition-colors leading-tight">Biblioteca • projeto criado em java spring boot</h3>
-  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Sistema web de gestão de acervo e fluxo de empréstimos literários. Arquitetura robusta orientada a objetos com Spring Boot.</p></div><div><div class="flex flex-wrap gap-1.5 mb-space-md"><span class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Java</span>
-  <span class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Spring Boot</span>
-  <span class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">json.</span></div><div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><a class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all" href="https://github.com/NathanMuricy/Projeto_senai" rel="noopener noreferrer" target="_blank"><span class="">Código no GitHub</span>
-  <span class="material-symbols-outlined text-[16px]">code</span></a><span class="font-label-md text-label-md text-outline uppercase">Back-end</span></div></div></div></article>
-  
-  <!--Terceiro projeto-->
-  <article class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant" data-category="frontend" data-stitch-orig-opacity="1" style="display: flex;"><div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest">
-  <img alt="Preço Certo - Aplicativo de Inteligência Financeira e Precificação para MEIs" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="index/portifolio3.jpg"><div class="absolute top-2 left-2 px-space-sm py-1 bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">Programação</div>
-  <div class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">2025 (Desenvolvimento)</div></div><div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"><div><h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-tertiary transition-colors leading-tight">preço certo • criação de aplicativo para tcc</h3>
-  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Plataforma web de inteligência financeira voltada à otimização de precificação e fluxo contábil para Microempreendedores Individuais (MEIs).</p></div><div><div class="flex flex-wrap gap-1.5 mb-space-md"><span class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Figma</span>
-  <span class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">HTML</span><span class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Banco de dados</span></div><div class="flex items-center justify-between pt-space-xs border-t border-surface-variant">
-  <button class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all cursor-pointer" onclick="openDevAlert('Preço Certo • Criação de Aplicativo para TCC')" type="button">
-  <span class="">Desenvolvimento</span><span class="material-symbols-outlined text-[16px]">code</span></button><span class="font-label-md text-label-md text-outline uppercase">Front end</span></div></div></div></article>
-  
-  <!--Quarto projeto-->
-  <article class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant" data-category="design" style="display: flex; opacity: 1;">
-  <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest">
-  <img alt="Cartão de visita JP Advocacia - Escritório de Advocacia" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Avant-garde typography posters exhibited on dark wall, brutalist swiss design poster series featuring bold Bebas Neue style lettering, intense magenta and yellow ink textures" src="index/portifolio4.jpg">
-  <div class="absolute top-2 left-2 px-space-sm py-1 bg-secondary text-[#3f001c] font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">Design Gráfico</div><div class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">2026</div></div><div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"><div><h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-secondary transition-colors leading-tight">JP Advocacia • Criação de identidade visual</h3>
-  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Criação da identidade visual de ume escritório de advocacia, na qual foi pensando a usabilidade de referencias com escudos e pilares.</p></div><div><div class="flex flex-wrap gap-1.5 mb-space-md"><span class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Photoshop</span><span class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Illustrator</span>
-  <span class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Logotipo tipográfico</span></div><div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><a class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-secondary text-on-secondary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all" href="https://www.behance.net/gallery/255226771/JP-Escritorio-de-advocacia" rel="noopener noreferrer" target="_blank"><span class="">Ver no Behance</span>
-  <span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><span class="font-label-md text-label-md text-outline uppercase">Identidade visual</span></div></div></div></article>
-
-  <!--Quinta projeto-->
-  <article class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant" data-category="branding frontend" style="display: flex; opacity: 1;"><div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest">
-  <img alt="Cordel Digital - Literatura de Cordel e Xilogravura" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Modern Design System tokens documentation in Figma interface, displaying typography scales, atomic UI components, color variables, and interactive states on violet dark background" src="index/portifolio5.jpg">
-  <div class="absolute top-2 left-2 px-space-sm py-1 bg-primary text-on-primary font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">UI/UX &amp; Branding</div><div class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">2026 (Desenvolvimento)</div></div>
-  <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md"><div><h3 class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors leading-tight">Cordel digital • desenvolvimento com ia</h3><p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Plataforma imersiva de valorização da literatura de cordel com IA generativa.</p></div>
-  <div><div class="flex flex-wrap gap-1.5 mb-space-md"><span class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Antigravity</span><span class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Design gráfico</span><span class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Desenvolvimento com IA</span></div>
-  <div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><button class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all cursor-pointer" onclick="openDevAlert('Cordel Digital • Desenvolvimento com IA')" type="button"><span class="">Desenvolvimento</span><span class="material-symbols-outlined text-[16px]">construction</span></button>
-  <span class="font-label-md text-label-md text-outline uppercase">Design System</span></div></div></div></article></div></div></section>
- 
-
-  <!--Apresentação de projeto-->
-  <section class="w-full py-space-xl bg-surface-container-lowest" id="identidade-marca"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin"><div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm"><div><div class="flex items-center gap-space-xs"><span class="w-3 h-3 bg-secondary"></span><span class="font-label-md text-label-md uppercase tracking-widest text-secondary">02 // ESPECIFICAÇÃO &amp; IDENTIDADE</span></div><h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-space-xs">APRESENTAÇÃO DE PROJETO</h2></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md md:text-right">Construção geométrica, síntese cromática e rigor tipográfico da identidade visual de Nathan Muricy.</p></div><div class="flex flex-col gap-space-lg"><div class="bg-surface-container p-space-lg lg:p-space-xl shadow-[8px_8px_0px_#100336] border border-surface-variant flex flex-col lg:flex-row items-center gap-space-xl"><div class="w-full lg:w-1/2 flex flex-col items-center justify-center"><div class="relative w-full max-w-md aspect-square bg-[#f6f4f0] rounded-DEFAULT p-space-lg flex items-center justify-center shadow-[6px_6px_0px_#100336] overflow-hidden group"><div class="absolute top-3 left-3 px-space-xs py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm uppercase font-bold tracking-widest shadow-[1px_1px_0px_#100336]">SÍMBOLO OFICIAL</div><img alt="Logomarca Oficial Nathan Muricy" class="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)] transform group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuKr4gHhTLSbrIMnSvbyfB2nAkKqnFIwTpQDs__1SOcGHvi5qKSbTfwClrMz3Ih6AnxNL4lQdJBpNBy1x3XOD4Br3f35Ne-EJSpzLdkEN7YwydD7CNNCw3ukTvjuIgduNiIHXom4tDKS6FMfEcDxlvYbmFBQOy7QWpG13QtdWtVhwzbNcLdI01t_tVeIdZBQw3HgLpJq7V06a43msyFm3uLzkxTrPyP8vx3P9RuIO34TOMKTL-CuHTd07UxBHxFZRKG9s"></div></div><div class="w-full lg:w-1/2 flex flex-col justify-between gap-space-md"><div class="flex flex-col gap-space-sm"><div class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high w-fit shadow-[2px_2px_0px_#100336]"><span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">LOGOMARCA &amp; IDENTIDADE OFICIAL</span></div><h3 class="font-headline-lg text-headline-lg uppercase text-on-surface leading-none">MONOGRAMA ISOMÉTRICO NM</h3>
-  <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">A marca consolida o entrelaçamento cirúrgico entre as iniciais <strong class="text-secondary font-bold">N</strong> (Magenta vibrante) e <strong class="text-primary font-bold">M</strong> (Azul/Roxo Profundo). Os chanfros geométricos cortados precisamente a 45º transmitem dinamismo visual, vetorização estrutural e solidez, eliminando excessos decorativos em favor de uma presença moderna e memorável.</p></div><div class="grid grid-cols-2 gap-space-xs mt-space-sm sm:grid-cols-3"><div class="p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336] flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Ângulo</span><span class="font-headline-sm text-headline-sm text-tertiary">45°</span></div><div class="p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336] flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Grid Base</span><span class="font-headline-sm text-headline-sm text-secondary">8PT ISO</span></div><div class="p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336] flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Construção</span><span class="font-headline-sm text-headline-sm text-primary">VETORIAL</span></div></div></div></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter"><div class="lg:col-span-7 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col justify-between"><div class="flex items-center justify-between pb-space-sm"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 bg-tertiary"></span><span class="font-label-md text-label-md uppercase tracking-widest text-tertiary font-bold">Paleta Cromática Oficial</span></div><span class="font-label-sm text-label-sm text-outline hidden sm:inline">Clique para copiar HEX</span></div><div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-space-xs mt-space-sm"><button class="group relative flex flex-col text-left p-space-sm bg-[#4e3f88] text-on-surface h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]" onclick="copyColor('#4e3f88', 'Deep Violet')"><span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider font-bold">Superfície</span><div><span class="font-headline-sm text-headline-sm block">#4e3f88</span><span class="font-label-sm text-label-sm text-on-surface-variant block">R:78 G:63 B:136</span></div><div class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div></button><button class="group relative flex flex-col text-left p-space-sm bg-[#312657] text-on-surface h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]" onclick="copyColor('#312657', 'Dark Obsidian')"><span class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider font-bold">Base Escura</span><div><span class="font-headline-sm text-headline-sm block">#312657</span><span class="font-label-sm text-label-sm text-on-surface-variant block">R:49 G:38 B:87</span></div><div class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div></button><button class="group relative flex flex-col text-left p-space-sm bg-[#e97099] text-[#3f001c] h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]" onclick="copyColor('#e97099', 'Magenta Pink')"><span class="font-label-sm text-label-sm text-[#640231] uppercase tracking-wider font-bold">Acento Criativo</span><div><span class="font-headline-sm text-headline-sm block">#E97099</span><span class="font-label-sm text-label-sm text-[#640231] block">R:233 G:112 B:153</span></div><div class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-[#3f001c] font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div></button><button class="group relative flex flex-col text-left p-space-sm bg-[#f5e900] text-[#1e1c00] h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]" onclick="copyColor('#f5e900', 'Neon Yellow')"><span class="font-label-sm text-label-sm text-[#454100] uppercase tracking-wider font-bold">Alta Tensão</span><div><span class="font-headline-sm text-headline-sm block">#F5E900</span><span class="font-label-sm text-label-sm text-[#454100] block">R:245 G:233 B:00</span></div><div class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-[#1e1c00] font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div></button><button class="group relative flex flex-col text-left p-space-sm bg-[#33d8ca] text-[#003833] h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]" onclick="copyColor('#33d8ca', 'Digital Turquoise')"><span class="font-label-sm text-label-sm text-[#004f48] uppercase tracking-wider font-bold">Front-End Tech</span><div><span class="font-headline-sm text-headline-sm block">#33D8CA</span><span class="font-label-sm text-label-sm text-[#004f48] block">R:51 G:216 B:202</span></div><div class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-[#003833] font-bold flex items-center gap-1"><span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div></button></div><div class="mt-space-md p-space-sm bg-surface-container-high flex flex-col gap-1 shadow-[2px_2px_0px_#100336]"><span class="font-label-md text-label-md uppercase text-tertiary font-bold">Aplicação das Cores &amp; Diretrizes de Contraste</span><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Na aplicação de cores em fundo claro (como azul, amarelo e neon), são usados o acento criativo (#E97099) e a cor de superfície (#4E3F88). Com as cores de superfície, utilizam-se os tons amarelo e neon, ficando a base escura (#312657) como cor de apoio estrutural e contraste.</p></div></div><div class="lg:col-span-5 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col justify-between gap-space-sm"><div class="flex items-center justify-between pb-space-xs"><div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 bg-secondary"></span><span class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Brand Typography</span></div><span class="font-label-sm text-label-sm text-outline">Diretrizes de Fonte</span></div><div class="grid grid-cols-1 gap-space-xs shadow-[3px_3px_0px_#100336] overflow-hidden flex-1"><div class="bg-secondary text-[#3f001c] p-space-md flex flex-col justify-between gap-space-sm"><div>
-  <span class="font-label-md text-label-md uppercase tracking-wider block font-bold text-[#640231]">TÍTULOS E SUBTÍTULOS</span><span class="font-headline-sm text-headline-sm uppercase block font-bold tracking-wide mt-1">BEBAS NEUE REGULAR</span></div><div class="font-headline-md text-headline-md tracking-wider leading-tight text-[#22000c]">AA BB CC DD EE FF<br>GG HH II JJ KK LL MM<br>NN OO PP QQ RR SS TT</div><span class="font-label-sm text-label-sm font-bold text-[#640231]">Display condensado • Caixa Alta Obrigatória</span></div><div class="bg-[#312657] text-[#e7deff] p-space-md flex flex-col justify-between gap-space-sm"><div><span class="font-label-md text-label-md uppercase tracking-wider block font-bold text-tertiary">TEXTOS E LEITURA</span><span class="font-title-lg text-title-lg block font-normal mt-1">Lato Regular</span></div><div class="font-body-md text-body-md tracking-normal leading-relaxed text-on-surface-variant font-light">Aa Bb Cc Dd Ee Ff Gg Hh Ii<br>Jj Kk Ll Mm Nn Oo Pp Qq<br>Rr Ss Tt Uu Vv Ww Xx Yy Zz</div><span class="font-label-sm text-label-sm text-outline">Proporções geométricas humanas • Alta leiturabilidade</span></div></div></div></div></div></div></section><section class="w-full py-space-xl bg-surface-container-lowest" id="sobre"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin"><div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm"><div><div class="flex items-center gap-space-xs"><span class="w-3 h-3 bg-tertiary"></span><span class="font-label-md text-label-md uppercase tracking-widest text-tertiary">03 // PERFIL &amp; COMPETÊNCIAS</span></div><h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-space-xs">Sobre &amp; Habilidades</h2></div><p class="font-body-md text-body-md text-on-surface-variant max-w-md">Síntese entre a precisão analítica do código e a sensibilidade estética do design visual.</p></div><div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter"><div class="lg:col-span-5 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col justify-between gap-space-md"><div><div class="flex items-center gap-space-xs mb-space-xs"><span class="font-label-md text-label-md uppercase tracking-widest text-secondary">Perfil &amp; Trajetória</span></div><h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Quem é Nathan Muricy</h3><div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant leading-relaxed"><p class="">Designer Gráfico e Desenvolvedor com atuação voltada à união visceral entre forma, legibilidade editorial e engenharia de software contemporânea.</p><p class="">Trabalho na concepção de sistemas visuais sólidos e interfaces acessíveis de alto impacto, combinando o rigor teórico dos fundamentos do design com arquitetura front-end modular e código sustentável.</p></div></div><div class="grid grid-cols-2 gap-space-xs pt-space-xs border-t border-surface-variant"><div class="p-space-xs bg-surface-container-high flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Foco</span><span class="font-label-md text-label-md font-bold text-tertiary">Híbrido Design &amp; Code</span></div><div class="p-space-xs bg-surface-container-high flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Base</span><span class="font-label-md text-label-md font-bold text-secondary">Bahia / Sergipe&nbsp; <br>Remoto Global</span></div><div class="p-space-xs bg-surface-container-high flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Princípio</span><span class="font-label-md text-label-md font-bold text-primary">Rigor &amp; Legibilidade</span></div><div class="p-space-xs bg-surface-container-high flex flex-col"><span class="font-label-sm text-label-sm uppercase text-outline">Status</span><span class="font-label-md text-label-md font-bold text-tertiary">Projetos &amp; Tech</span></div></div></div><div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-space-sm"><div class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#e97099] transition-all"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Design Visual &amp; Editorial</span><span class="material-symbols-outlined text-[20px] text-secondary">palette</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Domínio na criação de identidades, embalagens e linguagens visuais com tipografia rigorosa.</p></div><div class="flex flex-wrap gap-1 mt-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Pixel art</span><span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Illustrator</span><span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Photoshop</span><span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">InDesign</span><span class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Tipografia &amp; Grids</span></div></div><div class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#f5e900] transition-all"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-md text-label-md uppercase tracking-wider text-tertiary font-bold">Front-End &amp; Interatividade</span><span class="material-symbols-outlined text-[20px] text-tertiary">code</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Interfaces reativas, semântica apurada, manipulação DOM precisa e foco na experiência do usuário.</p></div><div class="flex flex-wrap gap-1 mt-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">HTML5 Semântico</span>
-  <span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">JavaScript<br></span><span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">DOM API</span><span class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">UI/UX Interativo</span></div></div><div class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#33d8ca] transition-all"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Engenharia &amp; Back-End</span><span class="material-symbols-outlined text-[20px] text-primary">terminal</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Fundamentos sólidos em computação estruturada, orientação a objetos e desenvolvimento backend.</p></div><div class="flex flex-wrap gap-1 mt-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">C</span><span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Java</span><span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Spring Boot</span><span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Git &amp; GitHub</span><span class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Programação Orientada a Objetos (POO)</span></div></div><div class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#cbbeff] transition-all"><div class="flex flex-col gap-space-xs"><div class="flex items-center justify-between"><span class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed font-bold">Metodologias &amp; Teoria</span><span class="material-symbols-outlined text-[20px] text-primary-fixed">menu_book</span></div><p class="font-body-sm text-body-sm text-on-surface-variant">Arquitetura de interfaces orientada a Atomic Design, unindo o rigor estético e semiótico do design gráfico a casos de uso reais da programação para compor ecossistemas digitais escaláveis,</p></div><div class="flex flex-wrap gap-1 mt-space-sm"><span class="px-space-xs py-0.5 bg-surface-container-high text-primary-fixed font-label-sm text-label-sm">Atomic Design</span><span class="px-space-xs py-0.5 bg-surface-container-high text-primary-fixed font-label-sm text-label-sm">Casos de Uso</span></div></div></div></div></div></section>
-
-
-<!-- SEÇÃO PROJETOS & HABILIDADES (FILTROS DINÂMICOS JS) -->
-
-
-<!-- SEÇÃO DE CONTATO DIRETO & FORMULÁRIO INTERATIVO -->
-<section class="w-full py-space-xl bg-surface" id="contato">
-<div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
-<!-- Section Header -->
-<div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm">
-<div>
-<div class="flex items-center gap-space-xs">
-<span class="w-3 h-3 bg-secondary"></span>
-<span class="font-label-md text-label-md uppercase tracking-widest text-secondary">04 // VAMOS CONVERSAR</span>
-</div>
-<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-space-xs">
-            Contato</h2>
-</div>
-<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
-          Tem um projeto, uma proposta de trabalho ou precisa de consultoria em design ou desenvolver um sistema ? Deixe uma mensagem abaixo.
-        </p>
-</div>
-<!-- Split Layout: Interactive Form + Contact Data Sidebar -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
-<!-- Interactive Form (DOM Events + Custom Validation + Toast) -->
-<div class="lg:col-span-7 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336]">
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-sm">
-            Enviar Mensagem
-          </h3>
-<!-- Form Alert Banner -->
-<div class="hidden mb-space-sm p-space-sm bg-[#86214a]/30 border-2 border-[#e97099] text-[#ffb1c7] font-body-sm shadow-[2px_2px_0px_#100336] flex items-start gap-space-xs" id="form-alert">
-<span class="material-symbols-outlined text-[20px] text-[#e97099] shrink-0">error</span>
-<span class="" id="form-alert-text">Por favor, preencha todos os campos obrigatórios corretamente antes do envio.</span>
-</div>
-<form class="flex flex-col gap-space-md" id="contact-form" novalidate="" onsubmit="handleFormSubmit(event)">
-<!-- Honeypot Anti-Bot Campo Oculto -->
-<div aria-hidden="true" style="display:none !important; position:absolute !important; left:-9999px !important;">
-<label class="" for="honeypot_hp_field">Ignore this field</label>
-<input autocomplete="off" id="honeypot_hp_field" name="website_trap" tabindex="-1" type="text">
-</div>
-<!-- Campo Nome -->
-<div class="flex flex-col gap-1">
-<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold" for="nome">
-                Nome Completo <span class="text-tertiary">*</span>
-</label>
-<input class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] transition-colors border-2 border-transparent" id="nome" placeholder="Ex: Alex Santana" required="" type="text">
-<span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider" id="err-nome">Por favor, informe seu nome completo.</span>
-</div>
-<!-- Campo Email -->
-<div class="flex flex-col gap-1">
-<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold" for="email">
-                E-mail Corporativo ou Pessoal <span class="text-tertiary">*</span>
-</label>
-<input class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] transition-colors border-2 border-transparent" id="email" placeholder="email@dominio.com.br" required="" type="email">
-<span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider" id="err-email">Informe um endereço de e-mail corporativo ou pessoal válido.</span>
-</div>
-<!-- Campo Tipo de Projeto (Select) -->
-<div class="flex flex-col gap-1">
-<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold" for="projeto-tipo">
-                Qual o escopo do projeto? <span class="text-tertiary">*</span>
-</label>
-<select class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] transition-colors border-2 border-transparent" id="projeto-tipo" required=""><option disabled="" selected="" value="">Selecione uma modalidade...</option>
-<option value="Design Gráfico">Design Gráfico</option>
-<option value="UI/UX &amp; Branding">UI/UX &amp; Branding</option>
-<option value="Programação &amp; Front-End">Programação &amp; Front-End</option>
-<option value="Desenvolvimento de Sistemas / Back-End">Desenvolvimento de Sistemas / Back-End</option>
-<option value="Consultoria &amp; Outros">Consultoria &amp; Outros</option></select>
-<span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider" id="err-projeto-tipo">Selecione uma modalidade de escopo para prosseguir.</span>
-</div>
-<!-- Campo Mensagem -->
-<div class="flex flex-col gap-1">
-<div class="flex justify-between items-center">
-<label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold" for="mensagem">
-                Detalhes do Projeto / Proposta <span class="text-tertiary">*</span>
-</label>
-<span class="font-label-sm text-label-sm text-outline" id="msg-counter">Mínimo 10 caracteres</span>
-</div>
-<textarea class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] resize-none transition-colors border-2 border-transparent" id="mensagem" placeholder="Conte brevemente sobre os objetivos, prazos estimados e contexto (mínimo 10 caracteres)..." required="" rows="5"></textarea>
-<span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider" id="err-mensagem">Descreva a proposta com pelo menos 10 caracteres.</span>
-</div>
-<!-- Submit Button -->
-<div class="pt-space-xs flex flex-col sm:flex-row items-start sm:items-center gap-space-sm">
-<button class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#100336] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-[2px_2px_0px_#100336]" disabled="true" id="submit-btn" type="submit">
-<span class="" id="submit-btn-text">(inativo temporariamente)</span>
-<span class="material-symbols-outlined text-[20px]" id="submit-btn-icon">block</span>
-</button>
-<span class="font-label-sm text-label-sm text-outline" id="rate-limit-hint">Envio direto protegido contra spam • Resposta rápida</span>
-</div>
-</form>
-</div>
-<!-- Lateral Info Box -->
-<div class="lg:col-span-5 flex flex-col justify-between gap-gutter">
-<div class="bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col gap-space-md">
-<div>
-<span class="font-label-md text-label-md uppercase tracking-widest text-primary">Canais Diretos</span>
-<h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-1">Contato Sem Intermediários</h3>
-</div>
-<div class="flex flex-col gap-space-sm">
-<!-- E-mail -->
-<a class="group flex items-center gap-space-sm p-space-sm bg-surface-container-high hover:bg-surface-bright transition-colors shadow-[2px_2px_0px_#100336]" href="mailto:nathanmuricystudio@gmail.com">
-<div class="p-space-xs bg-tertiary text-on-tertiary flex items-center justify-center">
-<span class="material-symbols-outlined text-[20px]">mail</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm uppercase text-outline">E-mail Principal</span>
-<span class="font-title-lg text-body-md font-bold text-on-surface group-hover:text-tertiary transition-colors">nathanmuricystudio@gmail.com</span>
-</div>
-</a>
-<!-- WhatsApp -->
-<a class="group flex items-center gap-space-sm p-space-sm bg-surface-container-high hover:bg-surface-bright transition-colors shadow-[2px_2px_0px_#100336]" href="https://wa.me/5571997152829" rel="noopener noreferrer" target="_blank">
-<div class="p-space-xs bg-secondary text-on-secondary flex items-center justify-center">
-<span class="material-symbols-outlined text-[20px]">chat</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm uppercase text-outline">WhatsApp / Mensagem</span>
-<span class="font-title-lg text-body-md font-bold text-on-surface group-hover:text-secondary transition-colors">+55 (71) 99715-2829</span>
-</div>
-</a>
-<!-- Localização -->
-<div class="flex items-center gap-space-sm p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336]">
-<div class="p-space-xs bg-primary text-on-primary flex items-center justify-center">
-<span class="material-symbols-outlined text-[20px]">location_on</span>
-</div>
-<div class="flex flex-col">
-<span class="font-label-sm text-label-sm uppercase text-outline">Localização &amp; Fuso</span>
-<span class="font-body-md text-body-md text-on-surface">Brasil • GMT-3 (Atendimento Global Remoto)</span>
-</div>
-</div>
-</div>
-<!-- Social Links Grid -->
-<div>
-<span class="font-label-sm text-label-sm uppercase tracking-widest text-outline block mb-space-xs">Plataformas &amp; Redes</span>
-<div class="grid grid-cols-3 gap-space-xs">
-<a class="p-space-xs text-center bg-surface-container-high text-on-surface hover:text-tertiary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[1px_1px_0px_#100336]" href="https://github.com/NathanMuricy" rel="noopener noreferrer" target="_blank">
-                  GitHub
+            </div>
+            <button aria-label="Fechar Modal"
+              class="p-1 text-on-surface-variant hover:text-secondary hover:bg-surface-container-high transition-colors rounded-DEFAULT flex items-center justify-center"
+              onclick="closeDevAlert()">
+              <span class="material-symbols-outlined text-[24px]">close</span>
+            </button>
+          </div>
+          <!-- Header do Conteúdo: Ícone + Títulos -->
+          <div class="flex flex-col sm:flex-row items-start gap-space-md mb-space-md">
+            <div
+              class="p-space-sm bg-surface-container-lowest border-2 border-[#f5e900] shadow-[3px_3px_0px_#100336] text-[#f5e900] flex items-center justify-center shrink-0">
+              <span class="material-symbols-outlined text-[36px] spin-slow">construction</span>
+            </div>
+            <div class="flex flex-col">
+              <div
+                class="inline-flex items-center gap-1 text-secondary font-label-sm text-label-sm uppercase tracking-widest font-bold mb-1">
+                <span class="material-symbols-outlined text-[16px]">terminal</span>
+                <span class="" id="dev-modal-project-name">PREÇO CERTO • CRIAÇÃO DE APLICATIVO PARA TCC</span>
+              </div>
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface tracking-wider leading-none"
+                id="dev-modal-title">
+                PROJETO EM DESENVOLVIMENTO
+              </h3>
+            </div>
+          </div>
+          <!-- Corpo Explicativo -->
+          <div
+            class="space-y-space-sm bg-surface-container p-space-md border border-[#4e3f88]/50 shadow-[inset_2px_2px_0px_#100336] mb-space-lg">
+            <p class="font-body-md text-body-md text-on-surface leading-relaxed">
+              Este projeto está atualmente na fase de concepção, prototipagem ou desenvolvimento técnico ativo. Por
+              enquanto, a documentação pública, o repositório ou o case online ainda não possuem link disponível.
+            </p>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed pt-2 border-t border-[#4e3f88]/40">
+              Você pode acompanhar novidades em breve pelo <strong class="text-tertiary">GitHub</strong> ou <strong
+                class="text-secondary">Behance</strong>, ou solicitar uma apresentação prévia pelo formulário de
+              contato.
+            </p>
+          </div>
+          <!-- Botões de Ação -->
+          <div
+            class="flex flex-col-reverse sm:flex-row items-stretch sm:items-center justify-end gap-space-sm pt-space-xs">
+            <a class="inline-flex items-center justify-center gap-1.5 px-space-md py-space-xs bg-surface-container-high hover:bg-surface-bright text-on-surface font-label-md text-label-md uppercase tracking-wider shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-[1px] active:translate-y-[1px] transition-all"
+              href="#contato" onclick="goToContactFromDevModal()">
+              <span class="material-symbols-outlined text-[18px] text-secondary">mail</span>
+              <span class="">Falar com Nathan</span>
+            </a>
+            <button
+              class="inline-flex items-center justify-center gap-1.5 px-space-lg py-space-xs bg-[#f5e900] text-[#1e1c00] font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] active:translate-x-[1px] active:translate-y-[1px] hover:shadow-[5px_5px_0px_#100336] transition-all font-bold"
+              onclick="closeDevAlert()">
+              <span class="">Entendi</span>
+              <span class="material-symbols-outlined text-[20px]">check</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Toast Notification System -->
+      <div
+        class="fixed bottom-6 right-6 z-[9999] transform translate-y-20 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-space-sm px-space-md py-space-sm bg-tertiary text-on-tertiary shadow-[4px_4px_0px_#100336] rounded-DEFAULT max-w-md"
+        id="toast">
+        <span class="material-symbols-outlined text-[20px] shrink-0" id="toast-icon">check_circle</span>
+        <span class="font-label-md text-label-md tracking-wider uppercase font-bold" id="toast-msg">Notificação</span>
+      </div>
+      <!-- HERO SECTION -->
+      <section class="relative w-full overflow-hidden bg-surface py-space-xl lg:py-24" id="hero">
+        <!-- Ambient Neo-Brutalist Grid Decorative Elements -->
+        <div
+          class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#cbbeff_1px,transparent_1px)] [background-size:24px_24px]">
+        </div>
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin relative z-10">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+            <!-- Hero Content Column -->
+            <div class="lg:col-span-7 flex flex-col gap-space-md">
+              <!-- Availability Badge -->
+              <div
+                class="inline-flex items-center gap-space-xs px-space-sm py-space-xs bg-surface-container-high w-fit rounded-DEFAULT shadow-[2px_2px_0px_#100336]">
+                <span class="w-2.5 h-2.5 rounded-full bg-tertiary animate-pulse"></span>
+                <span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-bold">Disponível
+                  para novos projetos • Freelance &amp; Tech</span>
+              </div>
+              <!-- Main Impact Title -->
+              <div class="flex flex-col">
+                <h1 class="font-display-hero text-display-hero uppercase text-on-surface tracking-wider leading-none">
+                  NATHAN MURICY
+                </h1>
+                <div class="flex flex-wrap items-center gap-x-space-sm gap-y-1 mt-2">
+                  <span class="font-headline-md text-headline-md uppercase text-secondary tracking-wide">
+                    DESIGN GRÁFICO
+                  </span>
+                  <span class="font-headline-md text-headline-md text-tertiary">&amp;</span>
+                  <span class="font-headline-md text-headline-md uppercase text-primary tracking-wide">
+                    DESENVOLVIMENTO de sistema</span>
+                </div>
+              </div>
+              <!-- High-Contrast Tagline / Manifesto -->
+              <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">Desenvolvimento de
+                sistemas de alta performance e identidades visuais de excelência. Unindo rigor arquitetural, interfaces
+                fluidas e design estratégico para transformar ideias em experiências digitais memoráveis.</p>
+              <!-- CTAs & Fast Actions -->
+              <div class="flex flex-wrap items-center gap-space-md pt-space-sm">
+                <a class="inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#100336] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+                  href="#projetos">
+                  <span class="">Explorar Projetos</span>
+                  <span class="material-symbols-outlined text-[20px]">arrow_downward</span>
                 </a>
-<a class="p-space-xs text-center bg-surface-container-high text-on-surface hover:text-secondary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[1px_1px_0px_#100336]" href="https://www.behance.net/nathanmuricy" rel="noopener noreferrer" target="_blank">
-                  Behance
+                <a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-sm bg-secondary text-on-secondary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#100336] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all"
+                  href="#contato">
+                  <span class="">Falar Comigo</span>
+                  <span class="material-symbols-outlined text-[20px]">mail</span>
                 </a>
-<a class="p-space-xs text-center bg-surface-container-high text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[1px_1px_0px_#100336]" href="https://www.linkedin.com/in/nathan-muricy-18abb1336/" rel="noopener noreferrer" target="_blank">
-                  LinkedIn
-                </a>
-</div>
-</div>
-</div>
-<!-- Location Map Visualizer -->
-<div class="w-full h-44 bg-cover bg-center shadow-[4px_4px_0px_#100336] relative flex items-end p-space-sm" data-location="Salvador, Bahia, Brasil" style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAfs9nQwBDuStF2PazPRWx-RrgQS8UOQj3LTtPp9xNJgFPI6--M5YBmpmn2qg1WQKOpkCljtQn2fCw5xaXHter4bYzaZYoDVh3VDU0O6Fpt5kUqnAc2q2v4HeSU_hVBgjSSwtkpbjTd1sVdPkGUkNv3ZX-wa-WRRtjVfvN52dbKy7V-MNGRxGQCwJ71i2tPXJ0tjtNwgw7rFA_b3KK_GuBULxicJE0EwFfLRqfUlfotEzewIBh9e5_q-A&quot;);">
-<div class="bg-surface-container-lowest/90 backdrop-blur-sm p-space-xs flex items-center gap-1 shadow-[2px_2px_0px_#100336]">
-<span class="material-symbols-outlined text-[16px] text-tertiary">my_location</span>
-<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Base de Operações: Bahia, Brasil</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-  <!-- Interactive JavaScript Engine -->
-<script>
-    // Global Modal de Alerta de Projetos em Desenvolvimento
-    function openDevAlert(projectName = 'Projeto') {
-      const modal = document.getElementById('dev-alert-modal');
-      const modalCard = document.getElementById('dev-modal-card');
-      const nameEl = document.getElementById('dev-modal-project-name');
 
-      if (nameEl) {
-        nameEl.innerText = projectName.toUpperCase();
-      }
+              </div>
+            </div>
+            <!-- Hero Graphic & Emblem Box (Increased prominent size + Continuous Autoplay Video with 10s Pause Loop) -->
+            <div class="lg:col-span-5 flex justify-center lg:justify-end">
+              <div
+                class="group/hero-video relative w-full max-w-[430px] bg-surface-container-low p-space-md shadow-[10px_10px_0px_#100336] rounded-DEFAULT border border-surface-variant transition-all duration-300 hover:shadow-[14px_14px_0px_#100336]"
+                id="hero-logo-box">
+                <!-- Terminal Header & Status Indicator -->
+                <div
+                  class="flex items-center justify-between pb-space-sm border-b border-surface-variant/70 mb-space-sm">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-3 h-3 rounded-full bg-secondary" id="hero-led-1"></span>
+                    <span class="w-3 h-3 rounded-full bg-primary" id="hero-led-2"></span>
+                    <span class="w-3 h-3 rounded-full bg-tertiary" id="hero-led-3"></span>
+                    <span class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold ml-1"
+                      id="hero-status-tag">STATUS: REPRODUZINDO</span>
+                  </div>
+                  <span class="font-label-sm text-label-sm uppercase tracking-widest text-outline">SYS.ID //
+                    NM-2025</span>
+                </div>
+                <!-- Official Interactive Logo / Video Display Screen -->
+                <div
+                  class="relative w-full aspect-square bg-[#f6f4f0] rounded-DEFAULT p-space-sm overflow-hidden shadow-[inset_0_3px_6px_rgba(0,0,0,0.35)] flex items-center justify-center select-none"
+                  id="hero-screen-frame">
+                  <!-- Ambient Scanline Overlay -->
+                  <div
+                    class="absolute inset-0 pointer-events-none opacity-40 z-20 bg-gradient-to-b from-transparent via-[#e97099]/10 to-transparent">
+                  </div>
+                  <div
+                    class="laser-scan-bar absolute left-0 right-0 h-[3px] bg-gradient-to-r from-transparent via-[#f5e900] to-transparent shadow-[0_0_8px_#f5e900] opacity-80 z-30 pointer-events-none transition-opacity duration-200"
+                    id="hero-laser-scan" style="opacity: 0.8;"></div>
+                  <!-- Live / Repouso State Indicator -->
+                  <div
+                    class="absolute top-3 right-3 z-30 flex items-center gap-1.5 px-space-xs py-0.5 bg-surface-container-lowest/90 border border-secondary text-secondary shadow-[2px_2px_0px_#100336] transition-colors"
+                    id="hero-live-badge">
+                    <span class="w-2 h-2 rounded-full bg-secondary animate-ping" id="hero-live-dot"></span>
+                    <span class="font-label-sm text-label-sm uppercase font-bold tracking-wider"
+                      id="hero-live-text">REPRODUZINDO</span>
+                  </div>
+                  <!-- Video Element (Autoplay muted playsinline with 10s ended timeout loop) -->
+                  <video autoplay=""
+                    class="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.2)] transition-all duration-500 ease-out z-10"
+                    id="hero-brand-video" muted="" playsinline="" poster="assets/perfilEstatico.jpeg" preload="auto">
+                    <source src="assets/perfilVideo.mp4" type="video/mp4">
+                    <img alt="Nathan Muricy - Marca Animada &amp; Identidade Oficial"
+                      class="w-full h-full object-contain filter drop-shadow-[0_6px_16px_rgba(0,0,0,0.2)] brand-animated-motion"
+                      id="hero-logo-img" src="assets/perfilEstatico.jpeg">
+                  </video>
+                </div>
+                <!-- Meta Data Strip & Autoplay Indicator Controls Bar -->
+                <div
+                  class="mt-space-sm p-space-xs bg-surface-container flex items-center justify-between border-t border-surface-variant">
+                  <div class="flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+                    <span class="material-symbols-outlined text-[16px] text-tertiary animate-spin"
+                      id="hero-playback-icon" style="animation-duration: 4s;">sync</span>
+                    <span class="uppercase tracking-wider font-bold text-on-surface"
+                      id="hero-playback-caption">REPRODUÇÃO AUTOMÁTICA // INTERVALO 10S</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="font-label-sm text-label-sm text-outline uppercase tracking-wider"
+                      id="hero-timer-display">LOOP: 10S</span>
 
-      if (modal && modalCard) {
-        modal.classList.remove('hidden');
-        modal.classList.add('flex');
-        document.body.style.overflow = 'hidden';
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        // Animação de entrada Neo-Brutalista suave
-        requestAnimationFrame(() => {
-          modalCard.classList.remove('scale-95', 'opacity-0');
-          modalCard.classList.add('scale-100', 'opacity-100');
-        });
-      }
-    }
+      <!-- Seção de Projetos e portifolio -->
+      <!--titulo + divisões-->
+      <section
+        class="w-full py-24 lg:py-24 bg-surface-container-lowest border-t border-surface-variant relative shadow-[8px_8px_0px_#100336]"
+        id="projetos">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-xl gap-space-md">
+            <div>
+              <div class="flex items-center gap-space-xs">
+                <span class="w-3 h-3 bg-primary"></span><span
+                  class="font-label-md text-label-md uppercase tracking-widest text-primary font-bold">01 // TRABALHOS
+                  SELECIONADOS • VITRINE PRINCIPAL</span>
+              </div>
+              <h2
+                class="font-display-hero text-display-hero uppercase text-on-surface tracking-wider mt-space-xs leading-none">
+                PROJETOS &amp; PORTFÓLIO</h2>
+            </div>
+            <div class="flex flex-row items-center gap-space-xs overflow-hidden" id="portfolio-filters"><button
+                class="filter-btn px-space-md py-1 font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-tertiary text-on-tertiary"
+                data-filter="all">Todos (5)
+              </button><button
+                class="filter-btn px-space-md py-1 hover:text-secondary font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-surface-container text-on-surface"
+                data-filter="design">Design Gráfico</button><button
+                class="filter-btn active-filter px-space-md py-1 hover:text-tertiary font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-surface-container text-on-surface"
+                data-filter="frontend">Programação</button><button
+                class="filter-btn px-space-md py-1 hover:text-primary font-label-md text-label-md uppercase tracking-wider shadow-[2px_2px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all bg-surface-container text-on-surface"
+                data-filter="branding">UI/UX &amp; Branding</button></div>
+          </div>
 
-    function closeDevAlert() {
-      const modal = document.getElementById('dev-alert-modal');
-      const modalCard = document.getElementById('dev-modal-card');
+          <!--Primeiro projeto-->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter" id="portfolio-grid">
+            <article
+              class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant"
+              data-category="design branding" style="display: flex; opacity: 1;">
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest"><img
+                  alt="Nathan Muricy Studio - Mockup 3D na parede de madeira"
+                  class="w-full h-full bg-[#f6f4f0] transition-transform duration-500 group-hover:scale-105 object-cover"
+                  src="assets/portifolio1.jpg">
+                <div
+                  class="absolute top-2 left-2 px-space-sm py-1 bg-secondary text-[#3f001c] font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">
+                  Design Gráfico</div>
+                <div
+                  class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">
+                  2024</div>
+              </div>
+              <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-secondary transition-colors leading-tight">
+                    NATHAN MURICY STUDIO • CRIAÇÃO DE iDENTIDADE VISUAL</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Criação de uma
+                    identidade visual para uso próprio profissional e apresentação.</p>
+                </div>
+                <div>
+                  <div class="flex flex-wrap gap-1.5 mb-space-md"><span
+                      class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Illustrator</span><span
+                      class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Photoshop</span><span
+                      class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Mockups</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><a
+                      class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-secondary text-on-secondary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+                      href="https://www.behance.net/gallery/208478769/ID-Nathan-Muricy" rel="noopener noreferrer"
+                      target="_blank"><span class="">Ver no Behance</span><span
+                        class="material-symbols-outlined text-[16px]">arrow_outward</span>
+                    </a><span class="font-label-md text-label-md text-outline uppercase">Identidade visual</span></div>
+                </div>
+              </div>
+            </article>
 
-      if (modal && modalCard) {
-        modalCard.classList.remove('scale-100', 'opacity-100');
-        modalCard.classList.add('scale-95', 'opacity-0');
+            <!--Segundo projeto-->
+            <article
+              class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant"
+              data-category="frontend branding" style="display: flex; opacity: 1;">
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest"><img
+                  alt="Biblioteca Contemporânea - Projeto Java Spring Boot"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Futuristic neo-brutalist financial dashboard web application interface with neon yellow data graphs, dark mode background, high contrast typography and clean modular widgets"
+                  src="assets/portifolio2.jpg">
+                <div
+                  class="absolute top-2 left-2 px-space-sm py-1 bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">
+                  Programação</div>
+                <div
+                  class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">
+                  2025</div>
+              </div>
+              <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-tertiary transition-colors leading-tight">
+                    Biblioteca • projeto criado em java spring boot</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Sistema web de
+                    gestão de acervo e fluxo de empréstimos literários. Arquitetura robusta orientada a objetos com
+                    Spring Boot.</p>
+                </div>
+                <div>
+                  <div class="flex flex-wrap gap-1.5 mb-space-md"><span
+                      class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Java</span>
+                    <span
+                      class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Spring
+                      Boot</span>
+                    <span
+                      class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">json.</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><a
+                      class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+                      href="https://github.com/NathanMuricy/Projeto_senai" rel="noopener noreferrer"
+                      target="_blank"><span class="">Código no GitHub</span>
+                      <span class="material-symbols-outlined text-[16px]">code</span></a><span
+                      class="font-label-md text-label-md text-outline uppercase">Back-end</span></div>
+                </div>
+              </div>
+            </article>
 
-        setTimeout(() => {
-          modal.classList.remove('flex');
-          modal.classList.add('hidden');
-          document.body.style.overflow = '';
-        }, 200);
-      }
-    }
+            <!--Terceiro projeto-->
+            <article
+              class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant"
+              data-category="frontend" data-stitch-orig-opacity="1" style="display: flex;">
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest">
+                <img alt="Preço Certo - Aplicativo de Inteligência Financeira e Precificação para MEIs"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  src="assets/portifolio3.jpg">
+                <div
+                  class="absolute top-2 left-2 px-space-sm py-1 bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">
+                  Programação</div>
+                <div
+                  class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">
+                  2025 (Desenvolvimento)</div>
+              </div>
+              <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-tertiary transition-colors leading-tight">
+                    preço certo • criação de aplicativo para tcc</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Plataforma web
+                    de inteligência financeira voltada à otimização de precificação e fluxo contábil para
+                    Microempreendedores Individuais (MEIs).</p>
+                </div>
+                <div>
+                  <div class="flex flex-wrap gap-1.5 mb-space-md"><span
+                      class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Figma</span>
+                    <span
+                      class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">HTML</span><span
+                      class="px-space-sm py-1 bg-surface-container-high text-tertiary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Banco
+                      de dados</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-space-xs border-t border-surface-variant">
+                    <button
+                      class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-tertiary text-on-tertiary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all cursor-pointer"
+                      onclick="openDevAlert('Preço Certo • Criação de Aplicativo para TCC')" type="button">
+                      <span class="">Desenvolvimento</span><span
+                        class="material-symbols-outlined text-[16px]">code</span></button><span
+                      class="font-label-md text-label-md text-outline uppercase">Front end</span>
+                  </div>
+                </div>
+              </div>
+            </article>
 
-    function goToContactFromDevModal() {
-      closeDevAlert();
-      setTimeout(() => {
-        const contactSec = document.getElementById('contato');
-        if (contactSec) {
-          contactSec.scrollIntoView({ behavior: 'smooth' });
+            <!--Quarto projeto-->
+            <article
+              class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant"
+              data-category="design" style="display: flex; opacity: 1;">
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest">
+                <img alt="Cartão de visita JP Advocacia - Escritório de Advocacia"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Avant-garde typography posters exhibited on dark wall, brutalist swiss design poster series featuring bold Bebas Neue style lettering, intense magenta and yellow ink textures"
+                  src="assets/portifolio4.jpg">
+                <div
+                  class="absolute top-2 left-2 px-space-sm py-1 bg-secondary text-[#3f001c] font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">
+                  Design Gráfico</div>
+                <div
+                  class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">
+                  2026</div>
+              </div>
+              <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-secondary transition-colors leading-tight">
+                    JP Advocacia • Criação de identidade visual</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Criação da
+                    identidade visual de ume escritório de advocacia, na qual foi pensando a usabilidade de referencias
+                    com escudos e pilares.</p>
+                </div>
+                <div>
+                  <div class="flex flex-wrap gap-1.5 mb-space-md"><span
+                      class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Photoshop</span><span
+                      class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Illustrator</span>
+                    <span
+                      class="px-space-sm py-1 bg-surface-container-high text-secondary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Logotipo
+                      tipográfico</span>
+                  </div>
+                  <div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><a
+                      class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-secondary text-on-secondary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all"
+                      href="https://www.behance.net/gallery/255226771/JP-Escritorio-de-advocacia"
+                      rel="noopener noreferrer" target="_blank"><span class="">Ver no Behance</span>
+                      <span class="material-symbols-outlined text-[16px]">arrow_outward</span></a><span
+                      class="font-label-md text-label-md text-outline uppercase">Identidade visual</span></div>
+                </div>
+              </div>
+            </article>
+
+            <!--Quinta projeto-->
+            <article
+              class="project-item group flex flex-col bg-surface-container shadow-[8px_8px_0px_#100336] transition-all duration-300 hover:-translate-y-1.5 border-surface-variant"
+              data-category="branding frontend" style="display: flex; opacity: 1;">
+              <div class="relative w-full aspect-[4/3] overflow-hidden bg-surface-container-highest">
+                <img alt="Cordel Digital - Literatura de Cordel e Xilogravura"
+                  class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  data-alt="Modern Design System tokens documentation in Figma interface, displaying typography scales, atomic UI components, color variables, and interactive states on violet dark background"
+                  src="assets/portifolio5.jpg">
+                <div
+                  class="absolute top-2 left-2 px-space-sm py-1 bg-primary text-on-primary font-label-md text-label-md uppercase font-bold shadow-[2px_2px_0px_#100336]">
+                  UI/UX &amp; Branding</div>
+                <div
+                  class="absolute bottom-2 right-2 px-space-sm py-1 bg-surface-container-lowest text-tertiary font-label-md text-label-md font-bold shadow-[2px_2px_0px_#100336]">
+                  2026 (Desenvolvimento)</div>
+              </div>
+              <div class="p-space-lg flex flex-col justify-between flex-1 gap-space-md">
+                <div>
+                  <h3
+                    class="font-headline-md text-headline-md uppercase text-on-surface group-hover:text-primary transition-colors leading-tight">
+                    Cordel digital • desenvolvimento com ia</h3>
+                  <p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed h-20">Plataforma
+                    imersiva de valorização da literatura de cordel com IA generativa.</p>
+                </div>
+                <div>
+                  <div class="flex flex-wrap gap-1.5 mb-space-md"><span
+                      class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Antigravity</span><span
+                      class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Design
+                      gráfico</span><span
+                      class="px-space-sm py-1 bg-surface-container-high text-primary font-label-sm text-label-sm font-bold shadow-[1px_1px_0px_#100336]">Desenvolvimento
+                      com IA</span></div>
+                  <div class="flex items-center justify-between pt-space-xs border-t border-surface-variant"><button
+                      class="inline-flex items-center gap-1.5 px-space-md py-space-xs bg-primary text-on-primary font-label-md text-label-md uppercase font-bold shadow-[3px_3px_0px_#100336] hover:translate-x-[-1px] hover:translate-y-[-1px] transition-all cursor-pointer"
+                      onclick="openDevAlert('Cordel Digital • Desenvolvimento com IA')" type="button"><span
+                        class="">Desenvolvimento</span><span
+                        class="material-symbols-outlined text-[16px]">construction</span></button>
+                    <span class="font-label-md text-label-md text-outline uppercase">Design System</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+      <!--Apresentação de projeto-->
+      <section class="w-full py-space-xl bg-surface-container-lowest" id="identidade-marca">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm">
+            <div>
+              <div class="flex items-center gap-space-xs"><span class="w-3 h-3 bg-secondary"></span><span
+                  class="font-label-md text-label-md uppercase tracking-widest text-secondary">02 // ESPECIFICAÇÃO &amp;
+                  IDENTIDADE</span></div>
+              <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-space-xs">
+                APRESENTAÇÃO DE PROJETO</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md md:text-right">Construção geométrica,
+              síntese cromática e rigor tipográfico da identidade visual de Nathan Muricy.</p>
+          </div>
+          <div class="flex flex-col gap-space-lg">
+            <div
+              class="bg-surface-container p-space-lg lg:p-space-xl shadow-[8px_8px_0px_#100336] border border-surface-variant flex flex-col lg:flex-row items-center gap-space-xl">
+              <div class="w-full lg:w-1/2 flex flex-col items-center justify-center">
+                <div
+                  class="relative w-full max-w-md aspect-square bg-[#f6f4f0] rounded-DEFAULT p-space-lg flex items-center justify-center shadow-[6px_6px_0px_#100336] overflow-hidden group">
+                  <div
+                    class="absolute top-3 left-3 px-space-xs py-0.5 bg-surface-container-lowest text-primary font-label-sm text-label-sm uppercase font-bold tracking-widest shadow-[1px_1px_0px_#100336]">
+                    SÍMBOLO OFICIAL</div><img alt="Logomarca Oficial Nathan Muricy"
+                    class="w-full h-full object-contain filter drop-shadow-[0_8px_20px_rgba(0,0,0,0.15)] transform group-hover:scale-105 transition-transform duration-300"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuKr4gHhTLSbrIMnSvbyfB2nAkKqnFIwTpQDs__1SOcGHvi5qKSbTfwClrMz3Ih6AnxNL4lQdJBpNBy1x3XOD4Br3f35Ne-EJSpzLdkEN7YwydD7CNNCw3ukTvjuIgduNiIHXom4tDKS6FMfEcDxlvYbmFBQOy7QWpG13QtdWtVhwzbNcLdI01t_tVeIdZBQw3HgLpJq7V06a43msyFm3uLzkxTrPyP8vx3P9RuIO34TOMKTL-CuHTd07UxBHxFZRKG9s">
+                </div>
+              </div>
+              <div class="w-full lg:w-1/2 flex flex-col justify-between gap-space-md">
+                <div class="flex flex-col gap-space-sm">
+                  <div
+                    class="inline-flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-high w-fit shadow-[2px_2px_0px_#100336]">
+                    <span class="w-2.5 h-2.5 rounded-full bg-secondary"></span><span
+                      class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">LOGOMARCA
+                      &amp; IDENTIDADE OFICIAL</span></div>
+                  <h3 class="font-headline-lg text-headline-lg uppercase text-on-surface leading-none">MONOGRAMA
+                    ISOMÉTRICO NM</h3>
+                  <p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">A marca consolida o
+                    entrelaçamento cirúrgico entre as iniciais <strong class="text-secondary font-bold">N</strong>
+                    (Magenta vibrante) e <strong class="text-primary font-bold">M</strong> (Azul/Roxo Profundo). Os
+                    chanfros geométricos cortados precisamente a 45º transmitem dinamismo visual, vetorização estrutural
+                    e solidez, eliminando excessos decorativos em favor de uma presença moderna e memorável.</p>
+                </div>
+                <div class="grid grid-cols-2 gap-space-xs mt-space-sm sm:grid-cols-3">
+                  <div class="p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336] flex flex-col"><span
+                      class="font-label-sm text-label-sm uppercase text-outline">Ângulo</span><span
+                      class="font-headline-sm text-headline-sm text-tertiary">45°</span></div>
+                  <div class="p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336] flex flex-col"><span
+                      class="font-label-sm text-label-sm uppercase text-outline">Grid Base</span><span
+                      class="font-headline-sm text-headline-sm text-secondary">8PT ISO</span></div>
+                  <div class="p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336] flex flex-col"><span
+                      class="font-label-sm text-label-sm uppercase text-outline">Construção</span><span
+                      class="font-headline-sm text-headline-sm text-primary">VETORIAL</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+              <div
+                class="lg:col-span-7 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col justify-between">
+                <div class="flex items-center justify-between pb-space-sm">
+                  <div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 bg-tertiary"></span><span
+                      class="font-label-md text-label-md uppercase tracking-widest text-tertiary font-bold">Paleta
+                      Cromática Oficial</span></div><span
+                    class="font-label-sm text-label-sm text-outline hidden sm:inline">Clique para copiar HEX</span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-space-xs mt-space-sm"><button
+                    class="group relative flex flex-col text-left p-space-sm bg-[#4e3f88] text-on-surface h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]"
+                    onclick="copyColor('#4e3f88', 'Deep Violet')"><span
+                      class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider font-bold">Superfície</span>
+                    <div><span class="font-headline-sm text-headline-sm block">#4e3f88</span><span
+                        class="font-label-sm text-label-sm text-on-surface-variant block">R:78 G:63 B:136</span></div>
+                    <div
+                      class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div>
+                  </button><button
+                    class="group relative flex flex-col text-left p-space-sm bg-[#312657] text-on-surface h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]"
+                    onclick="copyColor('#312657', 'Dark Obsidian')"><span
+                      class="font-label-sm text-label-sm text-primary-fixed-dim uppercase tracking-wider font-bold">Base
+                      Escura</span>
+                    <div><span class="font-headline-sm text-headline-sm block">#312657</span><span
+                        class="font-label-sm text-label-sm text-on-surface-variant block">R:49 G:38 B:87</span></div>
+                    <div
+                      class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-tertiary font-bold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div>
+                  </button><button
+                    class="group relative flex flex-col text-left p-space-sm bg-[#e97099] text-[#3f001c] h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]"
+                    onclick="copyColor('#e97099', 'Magenta Pink')"><span
+                      class="font-label-sm text-label-sm text-[#640231] uppercase tracking-wider font-bold">Acento
+                      Criativo</span>
+                    <div><span class="font-headline-sm text-headline-sm block">#E97099</span><span
+                        class="font-label-sm text-label-sm text-[#640231] block">R:233 G:112 B:153</span></div>
+                    <div
+                      class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-[#3f001c] font-bold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div>
+                  </button><button
+                    class="group relative flex flex-col text-left p-space-sm bg-[#f5e900] text-[#1e1c00] h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]"
+                    onclick="copyColor('#f5e900', 'Neon Yellow')"><span
+                      class="font-label-sm text-label-sm text-[#454100] uppercase tracking-wider font-bold">Alta
+                      Tensão</span>
+                    <div><span class="font-headline-sm text-headline-sm block">#F5E900</span><span
+                        class="font-label-sm text-label-sm text-[#454100] block">R:245 G:233 B:00</span></div>
+                    <div
+                      class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-[#1e1c00] font-bold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div>
+                  </button><button
+                    class="group relative flex flex-col text-left p-space-sm bg-[#33d8ca] text-[#003833] h-44 justify-between transition-transform hover:-translate-y-1 shadow-[2px_2px_0px_#100336]"
+                    onclick="copyColor('#33d8ca', 'Digital Turquoise')"><span
+                      class="font-label-sm text-label-sm text-[#004f48] uppercase tracking-wider font-bold">Front-End
+                      Tech</span>
+                    <div><span class="font-headline-sm text-headline-sm block">#33D8CA</span><span
+                        class="font-label-sm text-label-sm text-[#004f48] block">R:51 G:216 B:202</span></div>
+                    <div
+                      class="opacity-0 group-hover:opacity-100 transition-opacity font-label-sm text-label-sm text-[#003833] font-bold flex items-center gap-1">
+                      <span class="material-symbols-outlined text-[16px]">content_copy</span> COPIAR</div>
+                  </button></div>
+                <div
+                  class="mt-space-md p-space-sm bg-surface-container-high flex flex-col gap-1 shadow-[2px_2px_0px_#100336]">
+                  <span class="font-label-md text-label-md uppercase text-tertiary font-bold">Aplicação das Cores &amp;
+                    Diretrizes de Contraste</span>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Na aplicação de cores em
+                    fundo claro (como azul, amarelo e neon), são usados o acento criativo (#E97099) e a cor de
+                    superfície (#4E3F88). Com as cores de superfície, utilizam-se os tons amarelo e neon, ficando a base
+                    escura (#312657) como cor de apoio estrutural e contraste.</p>
+                </div>
+              </div>
+              <div
+                class="lg:col-span-5 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col justify-between gap-space-sm">
+                <div class="flex items-center justify-between pb-space-xs">
+                  <div class="flex items-center gap-space-xs"><span class="w-2.5 h-2.5 bg-secondary"></span><span
+                      class="font-label-md text-label-md uppercase tracking-widest text-secondary font-bold">Brand
+                      Typography</span></div><span class="font-label-sm text-label-sm text-outline">Diretrizes de
+                    Fonte</span>
+                </div>
+                <div class="grid grid-cols-1 gap-space-xs shadow-[3px_3px_0px_#100336] overflow-hidden flex-1">
+                  <div class="bg-secondary text-[#3f001c] p-space-md flex flex-col justify-between gap-space-sm">
+                    <div>
+                      <span
+                        class="font-label-md text-label-md uppercase tracking-wider block font-bold text-[#640231]">TÍTULOS
+                        E SUBTÍTULOS</span><span
+                        class="font-headline-sm text-headline-sm uppercase block font-bold tracking-wide mt-1">BEBAS
+                        NEUE REGULAR</span>
+                    </div>
+                    <div class="font-headline-md text-headline-md tracking-wider leading-tight text-[#22000c]">AA BB CC
+                      DD EE FF<br>GG HH II JJ KK LL MM<br>NN OO PP QQ RR SS TT</div><span
+                      class="font-label-sm text-label-sm font-bold text-[#640231]">Display condensado • Caixa Alta
+                      Obrigatória</span>
+                  </div>
+                  <div class="bg-[#312657] text-[#e7deff] p-space-md flex flex-col justify-between gap-space-sm">
+                    <div><span
+                        class="font-label-md text-label-md uppercase tracking-wider block font-bold text-tertiary">TEXTOS
+                        E LEITURA</span><span class="font-title-lg text-title-lg block font-normal mt-1">Lato
+                        Regular</span></div>
+                    <div
+                      class="font-body-md text-body-md tracking-normal leading-relaxed text-on-surface-variant font-light">
+                      Aa Bb Cc Dd Ee Ff Gg Hh Ii<br>Jj Kk Ll Mm Nn Oo Pp Qq<br>Rr Ss Tt Uu Vv Ww Xx Yy Zz</div><span
+                      class="font-label-sm text-label-sm text-outline">Proporções geométricas humanas • Alta
+                      leiturabilidade</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="w-full py-space-xl bg-surface-container-lowest" id="sobre">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm">
+            <div>
+              <div class="flex items-center gap-space-xs"><span class="w-3 h-3 bg-tertiary"></span><span
+                  class="font-label-md text-label-md uppercase tracking-widest text-tertiary">03 // PERFIL &amp;
+                  COMPETÊNCIAS</span></div>
+              <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-space-xs">Sobre
+                &amp; Habilidades</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">Síntese entre a precisão analítica do
+              código e a sensibilidade estética do design visual.</p>
+          </div>
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <div
+              class="lg:col-span-5 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col justify-between gap-space-md">
+              <div>
+                <div class="flex items-center gap-space-xs mb-space-xs"><span
+                    class="font-label-md text-label-md uppercase tracking-widest text-secondary">Perfil &amp;
+                    Trajetória</span></div>
+                <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-xs">Quem é Nathan Muricy
+                </h3>
+                <div class="space-y-space-sm font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+                  <p class="">Designer Gráfico e Desenvolvedor com atuação voltada à união visceral entre forma,
+                    legibilidade editorial e engenharia de software contemporânea.</p>
+                  <p class="">Trabalho na concepção de sistemas visuais sólidos e interfaces acessíveis de alto impacto,
+                    combinando o rigor teórico dos fundamentos do design com arquitetura front-end modular e código
+                    sustentável.</p>
+                </div>
+              </div>
+              <div class="grid grid-cols-2 gap-space-xs pt-space-xs border-t border-surface-variant">
+                <div class="p-space-xs bg-surface-container-high flex flex-col"><span
+                    class="font-label-sm text-label-sm uppercase text-outline">Foco</span><span
+                    class="font-label-md text-label-md font-bold text-tertiary">Híbrido Design &amp; Code</span></div>
+                <div class="p-space-xs bg-surface-container-high flex flex-col"><span
+                    class="font-label-sm text-label-sm uppercase text-outline">Base</span><span
+                    class="font-label-md text-label-md font-bold text-secondary">Bahia / Sergipe&nbsp; <br>Remoto
+                    Global</span></div>
+                <div class="p-space-xs bg-surface-container-high flex flex-col"><span
+                    class="font-label-sm text-label-sm uppercase text-outline">Princípio</span><span
+                    class="font-label-md text-label-md font-bold text-primary">Rigor &amp; Legibilidade</span></div>
+                <div class="p-space-xs bg-surface-container-high flex flex-col"><span
+                    class="font-label-sm text-label-sm uppercase text-outline">Status</span><span
+                    class="font-label-md text-label-md font-bold text-tertiary">Projetos &amp; Tech</span></div>
+              </div>
+            </div>
+            <div class="lg:col-span-7 grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+              <div
+                class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#e97099] transition-all">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between"><span
+                      class="font-label-md text-label-md uppercase tracking-wider text-secondary font-bold">Design
+                      Visual &amp; Editorial</span><span
+                      class="material-symbols-outlined text-[20px] text-secondary">palette</span></div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Domínio na criação de identidades,
+                    embalagens e linguagens visuais com tipografia rigorosa.</p>
+                </div>
+                <div class="flex flex-wrap gap-1 mt-space-sm"><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Pixel
+                    art</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Illustrator</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Photoshop</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">InDesign</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-secondary font-label-sm text-label-sm">Tipografia
+                    &amp; Grids</span></div>
+              </div>
+              <div
+                class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#f5e900] transition-all">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between"><span
+                      class="font-label-md text-label-md uppercase tracking-wider text-tertiary font-bold">Front-End
+                      &amp; Interatividade</span><span
+                      class="material-symbols-outlined text-[20px] text-tertiary">code</span></div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Interfaces reativas, semântica apurada,
+                    manipulação DOM precisa e foco na experiência do usuário.</p>
+                </div>
+                <div class="flex flex-wrap gap-1 mt-space-sm"><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">HTML5
+                    Semântico</span>
+                  <span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">JavaScript<br></span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">DOM
+                    API</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-tertiary font-label-sm text-label-sm">UI/UX
+                    Interativo</span>
+                </div>
+              </div>
+              <div
+                class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#33d8ca] transition-all">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between"><span
+                      class="font-label-md text-label-md uppercase tracking-wider text-primary font-bold">Engenharia
+                      &amp; Back-End</span><span
+                      class="material-symbols-outlined text-[20px] text-primary">terminal</span></div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Fundamentos sólidos em computação
+                    estruturada, orientação a objetos e desenvolvimento backend.</p>
+                </div>
+                <div class="flex flex-wrap gap-1 mt-space-sm"><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">C</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Java</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Spring
+                    Boot</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Git
+                    &amp; GitHub</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary font-label-sm text-label-sm">Programação
+                    Orientada a Objetos (POO)</span></div>
+              </div>
+              <div
+                class="bg-surface-container p-space-md shadow-[4px_4px_0px_#100336] flex flex-col justify-between hover:shadow-[6px_6px_0px_#cbbeff] transition-all">
+                <div class="flex flex-col gap-space-xs">
+                  <div class="flex items-center justify-between"><span
+                      class="font-label-md text-label-md uppercase tracking-wider text-primary-fixed font-bold">Metodologias
+                      &amp; Teoria</span><span
+                      class="material-symbols-outlined text-[20px] text-primary-fixed">menu_book</span></div>
+                  <p class="font-body-sm text-body-sm text-on-surface-variant">Arquitetura de interfaces orientada a
+                    Atomic Design, unindo o rigor estético e semiótico do design gráfico a casos de uso reais da
+                    programação para compor ecossistemas digitais escaláveis,</p>
+                </div>
+                <div class="flex flex-wrap gap-1 mt-space-sm"><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary-fixed font-label-sm text-label-sm">Atomic
+                    Design</span><span
+                    class="px-space-xs py-0.5 bg-surface-container-high text-primary-fixed font-label-sm text-label-sm">Casos
+                    de Uso</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- SEÇÃO PROJETOS & HABILIDADES (FILTROS DINÂMICOS JS) -->
+
+
+      <!-- SEÇÃO DE CONTATO DIRETO & FORMULÁRIO INTERATIVO -->
+      <section class="w-full py-space-xl bg-surface" id="contato">
+        <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin">
+          <!-- Section Header -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between pb-space-lg gap-space-sm">
+            <div>
+              <div class="flex items-center gap-space-xs">
+                <span class="w-3 h-3 bg-secondary"></span>
+                <span class="font-label-md text-label-md uppercase tracking-widest text-secondary">04 // VAMOS
+                  CONVERSAR</span>
+              </div>
+              <h2 class="font-headline-lg text-headline-lg uppercase text-on-surface tracking-wide mt-space-xs">
+                Contato</h2>
+            </div>
+            <p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+              Tem um projeto, uma proposta de trabalho ou precisa de consultoria em design ou desenvolver um sistema ?
+              Deixe uma mensagem abaixo.
+            </p>
+          </div>
+          <!-- Split Layout: Interactive Form + Contact Data Sidebar -->
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+            <!-- Interactive Form (DOM Events + Custom Validation + Toast) -->
+            <div class="lg:col-span-7 bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336]">
+              <h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-space-sm">
+                Enviar Mensagem
+              </h3>
+              <!-- Form Alert Banner -->
+              <div
+                class="hidden mb-space-sm p-space-sm bg-[#86214a]/30 border-2 border-[#e97099] text-[#ffb1c7] font-body-sm shadow-[2px_2px_0px_#100336] flex items-start gap-space-xs"
+                id="form-alert">
+                <span class="material-symbols-outlined text-[20px] text-[#e97099] shrink-0">error</span>
+                <span class="" id="form-alert-text">Por favor, preencha todos os campos obrigatórios corretamente antes
+                  do envio.</span>
+              </div>
+              <form class="flex flex-col gap-space-md" id="contact-form" novalidate=""
+                onsubmit="handleFormSubmit(event)">
+                <!-- Honeypot Anti-Bot Campo Oculto -->
+                <div aria-hidden="true"
+                  style="display:none !important; position:absolute !important; left:-9999px !important;">
+                  <label class="" for="honeypot_hp_field">Ignore this field</label>
+                  <input autocomplete="off" id="honeypot_hp_field" name="website_trap" tabindex="-1" type="text">
+                </div>
+                <!-- Campo Nome -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold"
+                    for="nome">
+                    Nome Completo <span class="text-tertiary">*</span>
+                  </label>
+                  <input
+                    class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] transition-colors border-2 border-transparent"
+                    id="nome" placeholder="Ex: Alex Santana" required="" type="text">
+                  <span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider" id="err-nome">Por
+                    favor, informe seu nome completo.</span>
+                </div>
+                <!-- Campo Email -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold"
+                    for="email">
+                    E-mail Corporativo ou Pessoal <span class="text-tertiary">*</span>
+                  </label>
+                  <input
+                    class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] transition-colors border-2 border-transparent"
+                    id="email" placeholder="email@dominio.com.br" required="" type="email">
+                  <span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider" id="err-email">Informe
+                    um endereço de e-mail corporativo ou pessoal válido.</span>
+                </div>
+                <!-- Campo Tipo de Projeto (Select) -->
+                <div class="flex flex-col gap-1">
+                  <label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold"
+                    for="projeto-tipo">
+                    Qual o escopo do projeto? <span class="text-tertiary">*</span>
+                  </label>
+                  <select
+                    class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] transition-colors border-2 border-transparent"
+                    id="projeto-tipo" required="">
+                    <option disabled="" selected="" value="">Selecione uma modalidade...</option>
+                    <option value="Design Gráfico">Design Gráfico</option>
+                    <option value="UI/UX &amp; Branding">UI/UX &amp; Branding</option>
+                    <option value="Programação &amp; Front-End">Programação &amp; Front-End</option>
+                    <option value="Desenvolvimento de Sistemas / Back-End">Desenvolvimento de Sistemas / Back-End
+                    </option>
+                    <option value="Consultoria &amp; Outros">Consultoria &amp; Outros</option>
+                  </select>
+                  <span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider"
+                    id="err-projeto-tipo">Selecione uma modalidade de escopo para prosseguir.</span>
+                </div>
+                <!-- Campo Mensagem -->
+                <div class="flex flex-col gap-1">
+                  <div class="flex justify-between items-center">
+                    <label class="font-label-md text-label-md uppercase tracking-wider text-on-surface font-bold"
+                      for="mensagem">
+                      Detalhes do Projeto / Proposta <span class="text-tertiary">*</span>
+                    </label>
+                    <span class="font-label-sm text-label-sm text-outline" id="msg-counter">Mínimo 10 caracteres</span>
+                  </div>
+                  <textarea
+                    class="w-full p-space-sm bg-surface-container-highest text-on-surface font-body-md placeholder:text-outline focus:outline-none focus:bg-surface-bright shadow-[inset_2px_2px_0px_#100336] resize-none transition-colors border-2 border-transparent"
+                    id="mensagem"
+                    placeholder="Conte brevemente sobre os objetivos, prazos estimados e contexto (mínimo 10 caracteres)..."
+                    required="" rows="5"></textarea>
+                  <span class="hidden text-xs text-[#e97099] font-bold uppercase tracking-wider"
+                    id="err-mensagem">Descreva a proposta com pelo menos 10 caracteres.</span>
+                </div>
+                <!-- Submit Button -->
+                <div class="pt-space-xs flex flex-col sm:flex-row items-start sm:items-center gap-space-sm">
+                  <button
+                    class="w-full sm:w-auto inline-flex items-center justify-center gap-space-xs px-space-xl py-space-sm bg-tertiary text-on-tertiary font-headline-sm text-headline-sm uppercase tracking-wider shadow-[4px_4px_0px_#100336] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[6px_6px_0px_#100336] active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none disabled:shadow-[2px_2px_0px_#100336]"
+                    disabled="true" id="submit-btn" type="submit">
+                    <span class="" id="submit-btn-text">(inativo temporariamente)</span>
+                    <span class="material-symbols-outlined text-[20px]" id="submit-btn-icon">block</span>
+                  </button>
+                  <span class="font-label-sm text-label-sm text-outline" id="rate-limit-hint">Envio direto protegido
+                    contra spam • Resposta rápida</span>
+                </div>
+              </form>
+            </div>
+            <!-- Lateral Info Box -->
+            <div class="lg:col-span-5 flex flex-col justify-between gap-gutter">
+              <div class="bg-surface-container p-space-lg shadow-[4px_4px_0px_#100336] flex flex-col gap-space-md">
+                <div>
+                  <span class="font-label-md text-label-md uppercase tracking-widest text-primary">Canais Diretos</span>
+                  <h3 class="font-headline-md text-headline-md uppercase text-on-surface mt-1">Contato Sem
+                    Intermediários</h3>
+                </div>
+                <div class="flex flex-col gap-space-sm">
+                  <!-- E-mail -->
+                  <a class="group flex items-center gap-space-sm p-space-sm bg-surface-container-high hover:bg-surface-bright transition-colors shadow-[2px_2px_0px_#100336]"
+                    href="mailto:nathanmuricystudio@gmail.com">
+                    <div class="p-space-xs bg-tertiary text-on-tertiary flex items-center justify-center">
+                      <span class="material-symbols-outlined text-[20px]">mail</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-label-sm uppercase text-outline">E-mail Principal</span>
+                      <span
+                        class="font-title-lg text-body-md font-bold text-on-surface group-hover:text-tertiary transition-colors">nathanmuricystudio@gmail.com</span>
+                    </div>
+                  </a>
+                  <!-- WhatsApp -->
+                  <a class="group flex items-center gap-space-sm p-space-sm bg-surface-container-high hover:bg-surface-bright transition-colors shadow-[2px_2px_0px_#100336]"
+                    href="https://wa.me/5571997152829" rel="noopener noreferrer" target="_blank">
+                    <div class="p-space-xs bg-secondary text-on-secondary flex items-center justify-center">
+                      <span class="material-symbols-outlined text-[20px]">chat</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-label-sm uppercase text-outline">WhatsApp / Mensagem</span>
+                      <span
+                        class="font-title-lg text-body-md font-bold text-on-surface group-hover:text-secondary transition-colors">+55
+                        (71) 99715-2829</span>
+                    </div>
+                  </a>
+                  <!-- Localização -->
+                  <div
+                    class="flex items-center gap-space-sm p-space-sm bg-surface-container-high shadow-[2px_2px_0px_#100336]">
+                    <div class="p-space-xs bg-primary text-on-primary flex items-center justify-center">
+                      <span class="material-symbols-outlined text-[20px]">location_on</span>
+                    </div>
+                    <div class="flex flex-col">
+                      <span class="font-label-sm text-label-sm uppercase text-outline">Localização &amp; Fuso</span>
+                      <span class="font-body-md text-body-md text-on-surface">Brasil • GMT-3 (Atendimento Global
+                        Remoto)</span>
+                    </div>
+                  </div>
+                </div>
+                <!-- Social Links Grid -->
+                <div>
+                  <span
+                    class="font-label-sm text-label-sm uppercase tracking-widest text-outline block mb-space-xs">Plataformas
+                    &amp; Redes</span>
+                  <div class="grid grid-cols-3 gap-space-xs">
+                    <a class="p-space-xs text-center bg-surface-container-high text-on-surface hover:text-tertiary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[1px_1px_0px_#100336]"
+                      href="https://github.com/NathanMuricy" rel="noopener noreferrer" target="_blank">
+                      GitHub
+                    </a>
+                    <a class="p-space-xs text-center bg-surface-container-high text-on-surface hover:text-secondary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[1px_1px_0px_#100336]"
+                      href="https://www.behance.net/nathanmuricy" rel="noopener noreferrer" target="_blank">
+                      Behance
+                    </a>
+                    <a class="p-space-xs text-center bg-surface-container-high text-on-surface hover:text-primary font-label-md text-label-md uppercase tracking-wider transition-colors shadow-[1px_1px_0px_#100336]"
+                      href="https://www.linkedin.com/in/nathan-muricy-18abb1336/" rel="noopener noreferrer"
+                      target="_blank">
+                      LinkedIn
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Location Map Visualizer -->
+              <div
+                class="w-full h-44 bg-cover bg-center shadow-[4px_4px_0px_#100336] relative flex items-end p-space-sm"
+                data-location="Salvador, Bahia, Brasil"
+                style="background-image: url(&quot;https://lh3.googleusercontent.com/aida-public/AB6AXuAfs9nQwBDuStF2PazPRWx-RrgQS8UOQj3LTtPp9xNJgFPI6--M5YBmpmn2qg1WQKOpkCljtQn2fCw5xaXHter4bYzaZYoDVh3VDU0O6Fpt5kUqnAc2q2v4HeSU_hVBgjSSwtkpbjTd1sVdPkGUkNv3ZX-wa-WRRtjVfvN52dbKy7V-MNGRxGQCwJ71i2tPXJ0tjtNwgw7rFA_b3KK_GuBULxicJE0EwFfLRqfUlfotEzewIBh9e5_q-A&quot;);">
+                <div
+                  class="bg-surface-container-lowest/90 backdrop-blur-sm p-space-xs flex items-center gap-1 shadow-[2px_2px_0px_#100336]">
+                  <span class="material-symbols-outlined text-[16px] text-tertiary">my_location</span>
+                  <span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface">Base de Operações:
+                    Bahia, Brasil</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Interactive JavaScript Engine -->
+      <script>
+        // Global Modal de Alerta de Projetos em Desenvolvimento
+        function openDevAlert(projectName = 'Projeto') {
+          const modal = document.getElementById('dev-alert-modal');
+          const modalCard = document.getElementById('dev-modal-card');
+          const nameEl = document.getElementById('dev-modal-project-name');
+
+          if (nameEl) {
+            nameEl.innerText = projectName.toUpperCase();
+          }
+
+          if (modal && modalCard) {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+
+            // Animação de entrada Neo-Brutalista suave
+            requestAnimationFrame(() => {
+              modalCard.classList.remove('scale-95', 'opacity-0');
+              modalCard.classList.add('scale-100', 'opacity-100');
+            });
+          }
         }
-      }, 250);
-    }
 
-    // Fechar com tecla Escape
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        const modal = document.getElementById('dev-alert-modal');
-        if (modal && !modal.classList.contains('hidden')) {
+        function closeDevAlert() {
+          const modal = document.getElementById('dev-alert-modal');
+          const modalCard = document.getElementById('dev-modal-card');
+
+          if (modal && modalCard) {
+            modalCard.classList.remove('scale-100', 'opacity-100');
+            modalCard.classList.add('scale-95', 'opacity-0');
+
+            setTimeout(() => {
+              modal.classList.remove('flex');
+              modal.classList.add('hidden');
+              document.body.style.overflow = '';
+            }, 200);
+          }
+        }
+
+        function goToContactFromDevModal() {
           closeDevAlert();
-        }
-      }
-    });
-
-    // Continuous Autoplay Hero Video with 10s Pause Loop
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.getElementById('hero-brand-video');
-      const statusTag = document.getElementById('hero-status-tag');
-      const liveBadge = document.getElementById('hero-live-badge');
-      const liveText = document.getElementById('hero-live-text');
-      const liveDot = document.getElementById('hero-live-dot');
-      const timerDisplay = document.getElementById('hero-timer-display');
-      const playbackCaption = document.getElementById('hero-playback-caption');
-      const playbackIcon = document.getElementById('hero-playback-icon');
-      const laserScan = document.getElementById('hero-laser-scan');
-
-      let countdownTimer = null;
-
-      function updatePlayingState() {
-        if (statusTag) {
-          statusTag.innerText = 'STATUS: REPRODUZINDO';
-          statusTag.className = 'font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold ml-1';
-        }
-        if (liveBadge) {
-          liveBadge.className = 'absolute top-3 right-3 z-30 flex items-center gap-1.5 px-space-xs py-0.5 bg-surface-container-lowest/90 border border-secondary text-secondary shadow-[2px_2px_0px_#100336] transition-colors';
-        }
-        if (liveText) liveText.innerText = 'REPRODUZINDO';
-        if (liveDot) {
-          liveDot.className = 'w-2 h-2 rounded-full bg-secondary animate-ping';
-        }
-        if (laserScan) laserScan.style.opacity = '0.8';
-        if (timerDisplay) timerDisplay.innerText = 'LOOP: 10S';
-        if (playbackCaption) playbackCaption.innerText = 'REPRODUÇÃO AUTOMÁTICA // INTERVALO 10S';
-        if (playbackIcon) {
-          playbackIcon.innerText = 'sync';
-          playbackIcon.classList.add('animate-spin');
-        }
-      }
-
-      function updateWaitingState(remaining) {
-        if (statusTag) {
-          statusTag.innerText = `STATUS: AGUARDANDO (${remaining}S)`;
-          statusTag.className = 'font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-bold ml-1';
-        }
-        if (liveBadge) {
-          liveBadge.className = 'absolute top-3 right-3 z-30 flex items-center gap-1.5 px-space-xs py-0.5 bg-surface-container-lowest/90 border border-tertiary text-tertiary shadow-[2px_2px_0px_#100336] transition-colors';
-        }
-        if (liveText) liveText.innerText = `PAUSA ${remaining}S`;
-        if (liveDot) {
-          liveDot.className = 'w-2 h-2 rounded-full bg-tertiary animate-pulse';
-        }
-        if (laserScan) laserScan.style.opacity = '0.2';
-        if (timerDisplay) timerDisplay.innerText = `REINÍCIO: ${remaining}S`;
-        if (playbackCaption) playbackCaption.innerText = `INTERVALO DE 10S // REINICIANDO EM ${remaining}S`;
-        if (playbackIcon) {
-          playbackIcon.innerText = 'timer';
-          playbackIcon.classList.remove('animate-spin');
-        }
-      }
-
-      if (video) {
-        // Event listener estrito: quando o vídeo termina, aguarda exatamente 10s e reinicia
-        video.addEventListener('ended', () => {
-          let count = 10;
-          updateWaitingState(count);
-
-          clearInterval(countdownTimer);
-          countdownTimer = setInterval(() => {
-            count--;
-            if (count > 0) {
-              updateWaitingState(count);
-            } else {
-              clearInterval(countdownTimer);
-            }
-          }, 1000);
-
           setTimeout(() => {
-            clearInterval(countdownTimer);
-            video.currentTime = 0;
-            const playPromise = video.play();
-            if (playPromise !== undefined) {
-              playPromise.then(() => {
+            const contactSec = document.getElementById('contato');
+            if (contactSec) {
+              contactSec.scrollIntoView({ behavior: 'smooth' });
+            }
+          }, 250);
+        }
+
+        // Fechar com tecla Escape
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            const modal = document.getElementById('dev-alert-modal');
+            if (modal && !modal.classList.contains('hidden')) {
+              closeDevAlert();
+            }
+          }
+        });
+
+        // Continuous Autoplay Hero Video with 10s Pause Loop
+        document.addEventListener('DOMContentLoaded', () => {
+          const video = document.getElementById('hero-brand-video');
+          const statusTag = document.getElementById('hero-status-tag');
+          const liveBadge = document.getElementById('hero-live-badge');
+          const liveText = document.getElementById('hero-live-text');
+          const liveDot = document.getElementById('hero-live-dot');
+          const timerDisplay = document.getElementById('hero-timer-display');
+          const playbackCaption = document.getElementById('hero-playback-caption');
+          const playbackIcon = document.getElementById('hero-playback-icon');
+          const laserScan = document.getElementById('hero-laser-scan');
+
+          let countdownTimer = null;
+
+          function updatePlayingState() {
+            if (statusTag) {
+              statusTag.innerText = 'STATUS: REPRODUZINDO';
+              statusTag.className = 'font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold ml-1';
+            }
+            if (liveBadge) {
+              liveBadge.className = 'absolute top-3 right-3 z-30 flex items-center gap-1.5 px-space-xs py-0.5 bg-surface-container-lowest/90 border border-secondary text-secondary shadow-[2px_2px_0px_#100336] transition-colors';
+            }
+            if (liveText) liveText.innerText = 'REPRODUZINDO';
+            if (liveDot) {
+              liveDot.className = 'w-2 h-2 rounded-full bg-secondary animate-ping';
+            }
+            if (laserScan) laserScan.style.opacity = '0.8';
+            if (timerDisplay) timerDisplay.innerText = 'LOOP: 10S';
+            if (playbackCaption) playbackCaption.innerText = 'REPRODUÇÃO AUTOMÁTICA // INTERVALO 10S';
+            if (playbackIcon) {
+              playbackIcon.innerText = 'sync';
+              playbackIcon.classList.add('animate-spin');
+            }
+          }
+
+          function updateWaitingState(remaining) {
+            if (statusTag) {
+              statusTag.innerText = `STATUS: AGUARDANDO (${remaining}S)`;
+              statusTag.className = 'font-label-sm text-label-sm uppercase tracking-widest text-tertiary font-bold ml-1';
+            }
+            if (liveBadge) {
+              liveBadge.className = 'absolute top-3 right-3 z-30 flex items-center gap-1.5 px-space-xs py-0.5 bg-surface-container-lowest/90 border border-tertiary text-tertiary shadow-[2px_2px_0px_#100336] transition-colors';
+            }
+            if (liveText) liveText.innerText = `PAUSA ${remaining}S`;
+            if (liveDot) {
+              liveDot.className = 'w-2 h-2 rounded-full bg-tertiary animate-pulse';
+            }
+            if (laserScan) laserScan.style.opacity = '0.2';
+            if (timerDisplay) timerDisplay.innerText = `REINÍCIO: ${remaining}S`;
+            if (playbackCaption) playbackCaption.innerText = `INTERVALO DE 10S // REINICIANDO EM ${remaining}S`;
+            if (playbackIcon) {
+              playbackIcon.innerText = 'timer';
+              playbackIcon.classList.remove('animate-spin');
+            }
+          }
+
+          if (video) {
+            // Event listener estrito: quando o vídeo termina, aguarda exatamente 10s e reinicia
+            video.addEventListener('ended', () => {
+              let count = 10;
+              updateWaitingState(count);
+
+              clearInterval(countdownTimer);
+              countdownTimer = setInterval(() => {
+                count--;
+                if (count > 0) {
+                  updateWaitingState(count);
+                } else {
+                  clearInterval(countdownTimer);
+                }
+              }, 1000);
+
+              setTimeout(() => {
+                clearInterval(countdownTimer);
+                video.currentTime = 0;
+                const playPromise = video.play();
+                if (playPromise !== undefined) {
+                  playPromise.then(() => {
+                    updatePlayingState();
+                  }).catch(() => {
+                    // Fallback caso restrição do navegador intervenha
+                    video.muted = true;
+                    video.play();
+                    updatePlayingState();
+                  });
+                }
+              }, 10000);
+            });
+
+            video.addEventListener('play', () => {
+              updatePlayingState();
+            });
+
+            // Inicialização imediata ao carregar a página
+            video.muted = true;
+            const initialPlay = video.play();
+            if (initialPlay !== undefined) {
+              initialPlay.then(() => {
                 updatePlayingState();
               }).catch(() => {
-                // Fallback caso restrição do navegador intervenha
+                // Em caso de autoplay restrito, garante muted e nova tentativa
                 video.muted = true;
                 video.play();
                 updatePlayingState();
               });
             }
-          }, 10000);
+          }
         });
 
-        video.addEventListener('play', () => {
-          updatePlayingState();
-        });
+        // 1. Interactive Toast Notification Function
+        let toastTimeout;
+        function showToast(message, icon = 'check_circle', bgColor = 'bg-tertiary', textColor = 'text-on-tertiary') {
+          const toast = document.getElementById('toast');
+          const toastMsg = document.getElementById('toast-msg');
+          const toastIcon = document.getElementById('toast-icon');
 
-        // Inicialização imediata ao carregar a página
-        video.muted = true;
-        const initialPlay = video.play();
-        if (initialPlay !== undefined) {
-          initialPlay.then(() => {
-            updatePlayingState();
-          }).catch(() => {
-            // Em caso de autoplay restrito, garante muted e nova tentativa
-            video.muted = true;
-            video.play();
-            updatePlayingState();
-          });
+          if (!toast) return;
+
+          toastMsg.innerText = message;
+          toastIcon.innerText = icon;
+
+          // Reset base classes for custom tone
+          toast.className = `fixed bottom-6 right-6 z-[9999] transition-all duration-300 flex items-center gap-space-sm px-space-md py-space-sm shadow-[4px_4px_0px_#100336] rounded-DEFAULT max-w-md ${bgColor} ${textColor}`;
+
+          // Animate in
+          toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
+          toast.classList.add('opacity-100', 'translate-y-0');
+
+          clearTimeout(toastTimeout);
+          toastTimeout = setTimeout(() => {
+            toast.classList.remove('opacity-100', 'translate-y-0');
+            toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
+          }, 4500);
         }
-      }
-    });
 
-    // 1. Interactive Toast Notification Function
-    let toastTimeout;
-    function showToast(message, icon = 'check_circle', bgColor = 'bg-tertiary', textColor = 'text-on-tertiary') {
-      const toast = document.getElementById('toast');
-      const toastMsg = document.getElementById('toast-msg');
-      const toastIcon = document.getElementById('toast-icon');
-
-      if (!toast) return;
-
-      toastMsg.innerText = message;
-      toastIcon.innerText = icon;
-
-      // Reset base classes for custom tone
-      toast.className = `fixed bottom-6 right-6 z-[9999] transition-all duration-300 flex items-center gap-space-sm px-space-md py-space-sm shadow-[4px_4px_0px_#100336] rounded-DEFAULT max-w-md ${bgColor} ${textColor}`;
-
-      // Animate in
-      toast.classList.remove('opacity-0', 'translate-y-20', 'pointer-events-none');
-      toast.classList.add('opacity-100', 'translate-y-0');
-
-      clearTimeout(toastTimeout);
-      toastTimeout = setTimeout(() => {
-        toast.classList.remove('opacity-100', 'translate-y-0');
-        toast.classList.add('opacity-0', 'translate-y-20', 'pointer-events-none');
-      }, 4500);
-    }
-
-    // 2. Interactive Color Copy to Clipboard
-    function copyColor(hexValue, colorName) {
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(hexValue).then(() => {
-          showToast(`Cor copiada: ${hexValue} (${colorName})`, 'colorize');
-        }).catch(() => {
-          showToast(`Cor: ${hexValue}`, 'check_circle');
-        });
-      } else {
-        showToast(`Cor: ${hexValue}`, 'check_circle');
-      }
-    }
-
-    // 3. Project Dynamic Filter System (DOM Manipulation)
-    document.addEventListener('DOMContentLoaded', () => {
-      const filterBtns = document.querySelectorAll('.filter-btn');
-      const projectItems = document.querySelectorAll('.project-item');
-
-      filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          // Update button states
-          filterBtns.forEach(b => {
-            b.classList.remove('bg-tertiary', 'text-on-tertiary');
-            b.classList.add('bg-surface-container', 'text-on-surface');
-          });
-          btn.classList.remove('bg-surface-container', 'text-on-surface');
-          btn.classList.add('bg-tertiary', 'text-on-tertiary');
-
-          const filter = btn.getAttribute('data-filter');
-
-          projectItems.forEach(item => {
-            const categories = item.getAttribute('data-category') || '';
-            if (filter === 'all' || categories.includes(filter)) {
-              item.style.display = 'flex';
-              item.style.opacity = '1';
-            } else {
-              item.style.display = 'none';
-              item.style.opacity = '0';
-            }
-          });
-        });
-      });
-
-      // Checagem inicial de cooldown / rate limit persistido
-      checkExistingCooldown();
-    });
-
-    // 4. Sistema de Anti-Spam & Rate Limiting Local
-    const RATE_LIMIT_MAX_ATTEMPTS = 3;
-    const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutos
-    const COOLDOWN_SECONDS = 60; // 60 segundos cooldown pós-envio
-    let cooldownTimerInterval = null;
-
-    function getSubmissionsLog() {
-      try {
-        const raw = localStorage.getItem('nm_form_submissions');
-        return raw ? JSON.parse(raw) : [];
-      } catch (e) {
-        return [];
-      }
-    }
-
-    function recordSubmission() {
-      try {
-        const log = getSubmissionsLog();
-        const now = Date.now();
-        // Manter apenas registros dentro da janela de 5 minutos
-        const updated = log.filter(t => (now - t) < RATE_LIMIT_WINDOW_MS);
-        updated.push(now);
-        localStorage.setItem('nm_form_submissions', JSON.stringify(updated));
-        localStorage.setItem('nm_last_submission_ts', now.toString());
-      } catch (e) {
-        // Fallback silencioso caso localStorage esteja restrito
-      }
-    }
-
-    function isRateLimited() {
-      try {
-        const log = getSubmissionsLog();
-        const now = Date.now();
-        const recentAttempts = log.filter(t => (now - t) < RATE_LIMIT_WINDOW_MS);
-        return recentAttempts.length >= RATE_LIMIT_MAX_ATTEMPTS;
-      } catch (e) {
-        return false;
-      }
-    }
-
-    function startCooldownTimer(seconds) {
-      const submitBtn = document.getElementById('submit-btn');
-      const submitBtnText = document.getElementById('submit-btn-text');
-      const submitBtnIcon = document.getElementById('submit-btn-icon');
-      if (!submitBtn) return;
-
-      clearInterval(cooldownTimerInterval);
-      submitBtn.disabled = true;
-      let remaining = seconds;
-
-      const tick = () => {
-        if (remaining <= 0) {
-          clearInterval(cooldownTimerInterval);
-          submitBtn.disabled = false;
-          if (submitBtnText) submitBtnText.innerText = 'Enviar Mensagem Agora';
-          if (submitBtnIcon) submitBtnIcon.innerText = 'send';
-          localStorage.removeItem('nm_last_submission_ts');
-        } else {
-          if (submitBtnText) submitBtnText.innerText = `Aguarde ${remaining}s para novo envio`;
-          if (submitBtnIcon) submitBtnIcon.innerText = 'timer';
-          remaining--;
-        }
-      };
-
-      tick();
-      cooldownTimerInterval = setInterval(tick, 1000);
-    }
-
-    function checkExistingCooldown() {
-      try {
-        const lastTs = localStorage.getItem('nm_last_submission_ts');
-        if (lastTs) {
-          const elapsedSec = Math.floor((Date.now() - parseInt(lastTs, 10)) / 1000);
-          if (elapsedSec < COOLDOWN_SECONDS) {
-            startCooldownTimer(COOLDOWN_SECONDS - elapsedSec);
+        // 2. Interactive Color Copy to Clipboard
+        function copyColor(hexValue, colorName) {
+          if (navigator.clipboard) {
+            navigator.clipboard.writeText(hexValue).then(() => {
+              showToast(`Cor copiada: ${hexValue} (${colorName})`, 'colorize');
+            }).catch(() => {
+              showToast(`Cor: ${hexValue}`, 'check_circle');
+            });
+          } else {
+            showToast(`Cor: ${hexValue}`, 'check_circle');
           }
         }
-      } catch (e) {}
-    }
 
-    // Validações visuais de campos individuais
-    function setFieldState(inputEl, errorEl, isValid) {
-      if (!inputEl) return;
-      if (!isValid) {
-        inputEl.classList.remove('border-transparent');
-        inputEl.classList.add('border-[#e97099]', 'bg-[#86214a]/20');
-        if (errorEl) errorEl.classList.remove('hidden');
-      } else {
-        inputEl.classList.remove('border-[#e97099]', 'bg-[#86214a]/20');
-        inputEl.classList.add('border-transparent');
-        if (errorEl) errorEl.classList.add('hidden');
-      }
-    }
+        // 3. Project Dynamic Filter System (DOM Manipulation)
+        document.addEventListener('DOMContentLoaded', () => {
+          const filterBtns = document.querySelectorAll('.filter-btn');
+          const projectItems = document.querySelectorAll('.project-item');
 
-    // 5. Manipulação de Envio com Validação Estrita & Disparo mailto
-    function handleFormSubmit(event) {
-      event.preventDefault();
+          filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+              // Update button states
+              filterBtns.forEach(b => {
+                b.classList.remove('bg-tertiary', 'text-on-tertiary');
+                b.classList.add('bg-surface-container', 'text-on-surface');
+              });
+              btn.classList.remove('bg-surface-container', 'text-on-surface');
+              btn.classList.add('bg-tertiary', 'text-on-tertiary');
 
-      const honeypot = document.getElementById('honeypot_hp_field');
-      const nomeInput = document.getElementById('nome');
-      const emailInput = document.getElementById('email');
-      const projetoInput = document.getElementById('projeto-tipo');
-      const msgInput = document.getElementById('mensagem');
-      const submitBtn = document.getElementById('submit-btn');
-      const submitBtnText = document.getElementById('submit-btn-text');
-      const submitBtnIcon = document.getElementById('submit-btn-icon');
-      const alertBox = document.getElementById('form-alert');
-      const alertText = document.getElementById('form-alert-text');
+              const filter = btn.getAttribute('data-filter');
 
-      // (c) Honeypot invisible trap
-      if (honeypot && honeypot.value.trim() !== '') {
-        // Robô detectado: bloqueio silencioso
-        return false;
-      }
+              projectItems.forEach(item => {
+                const categories = item.getAttribute('data-category') || '';
+                if (filter === 'all' || categories.includes(filter)) {
+                  item.style.display = 'flex';
+                  item.style.opacity = '1';
+                } else {
+                  item.style.display = 'none';
+                  item.style.opacity = '0';
+                }
+              });
+            });
+          });
 
-      // (b) Rate limiting check
-      if (isRateLimited()) {
-        if (alertBox && alertText) {
-          alertText.innerText = 'Limite temporário de mensagens atingido para prevenir sobrecarga. Por favor, aguarde alguns minutos ou entre em contato diretamente pelo WhatsApp/E-mail.';
-          alertBox.classList.remove('hidden');
+          // Checagem inicial de cooldown / rate limit persistido
+          checkExistingCooldown();
+        });
+
+        // 4. Sistema de Anti-Spam & Rate Limiting Local
+        const RATE_LIMIT_MAX_ATTEMPTS = 3;
+        const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutos
+        const COOLDOWN_SECONDS = 60; // 60 segundos cooldown pós-envio
+        let cooldownTimerInterval = null;
+
+        function getSubmissionsLog() {
+          try {
+            const raw = localStorage.getItem('nm_form_submissions');
+            return raw ? JSON.parse(raw) : [];
+          } catch (e) {
+            return [];
+          }
         }
-        showToast('Limite temporário atingido. Use o WhatsApp ou e-mail direto.', 'shield', 'bg-[#86214a]', 'text-[#ffb1c7]');
-        return false;
-      }
 
-      // 1. Validação Estrita de Todos os Campos
-      const valNome = nomeInput.value.trim();
-      const valEmail = emailInput.value.trim();
-      const valProjeto = projetoInput.value.trim();
-      const valMsg = msgInput.value.trim();
-
-      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const isNomeValid = valNome.length >= 2;
-      const isEmailValid = emailRegex.test(valEmail);
-      const isProjetoValid = valProjeto !== '' && valProjeto !== 'Selecione uma modalidade...';
-      const isMsgValid = valMsg.length >= 10;
-
-      setFieldState(nomeInput, document.getElementById('err-nome'), isNomeValid);
-      setFieldState(emailInput, document.getElementById('err-email'), isEmailValid);
-      setFieldState(projetoInput, document.getElementById('err-projeto-tipo'), isProjetoValid);
-      setFieldState(msgInput, document.getElementById('err-mensagem'), isMsgValid);
-
-      if (!isNomeValid || !isEmailValid || !isProjetoValid || !isMsgValid) {
-        if (alertBox && alertText) {
-          alertText.innerText = 'Todos os campos são obrigatórios. Corrija os itens sinalizados em destaque antes de enviar.';
-          alertBox.classList.remove('hidden');
+        function recordSubmission() {
+          try {
+            const log = getSubmissionsLog();
+            const now = Date.now();
+            // Manter apenas registros dentro da janela de 5 minutos
+            const updated = log.filter(t => (now - t) < RATE_LIMIT_WINDOW_MS);
+            updated.push(now);
+            localStorage.setItem('nm_form_submissions', JSON.stringify(updated));
+            localStorage.setItem('nm_last_submission_ts', now.toString());
+          } catch (e) {
+            // Fallback silencioso caso localStorage esteja restrito
+          }
         }
-        showToast('Por favor, preencha todos os campos obrigatórios corretamente.', 'warning', 'bg-[#86214a]', 'text-[#ffb1c7]');
-        return false;
-      }
 
-      // Campos válidos: esconde alerta
-      if (alertBox) alertBox.classList.add('hidden');
+        function isRateLimited() {
+          try {
+            const log = getSubmissionsLog();
+            const now = Date.now();
+            const recentAttempts = log.filter(t => (now - t) < RATE_LIMIT_WINDOW_MS);
+            return recentAttempts.length >= RATE_LIMIT_MAX_ATTEMPTS;
+          } catch (e) {
+            return false;
+          }
+        }
 
-      // (d) Prevenção de duplo clique acidental: desabilita imediatamente
-      submitBtn.disabled = true;
-      if (submitBtnText) submitBtnText.innerText = 'Verificando dados...';
-      if (submitBtnIcon) submitBtnIcon.innerText = 'sync';
-      submitBtnIcon.classList.add('animate-spin');
+        function startCooldownTimer(seconds) {
+          const submitBtn = document.getElementById('submit-btn');
+          const submitBtnText = document.getElementById('submit-btn-text');
+          const submitBtnIcon = document.getElementById('submit-btn-icon');
+          if (!submitBtn) return;
 
-      setTimeout(() => {
-        // Montagem estruturada do e-mail
-        const recipient = 'nathanmuricystudio@gmail.com';
-        const subject = `[PROJETO / CONTATO] ${valNome} - ${valProjeto}`;
-        const now = new Date();
-        const formattedDate = now.toLocaleString('pt-BR', { dateStyle: 'full', timeStyle: 'short' });
+          clearInterval(cooldownTimerInterval);
+          submitBtn.disabled = true;
+          let remaining = seconds;
 
-        const bodyContent = 
-`Nome: ${valNome}
+          const tick = () => {
+            if (remaining <= 0) {
+              clearInterval(cooldownTimerInterval);
+              submitBtn.disabled = false;
+              if (submitBtnText) submitBtnText.innerText = 'Enviar Mensagem Agora';
+              if (submitBtnIcon) submitBtnIcon.innerText = 'send';
+              localStorage.removeItem('nm_last_submission_ts');
+            } else {
+              if (submitBtnText) submitBtnText.innerText = `Aguarde ${remaining}s para novo envio`;
+              if (submitBtnIcon) submitBtnIcon.innerText = 'timer';
+              remaining--;
+            }
+          };
+
+          tick();
+          cooldownTimerInterval = setInterval(tick, 1000);
+        }
+
+        function checkExistingCooldown() {
+          try {
+            const lastTs = localStorage.getItem('nm_last_submission_ts');
+            if (lastTs) {
+              const elapsedSec = Math.floor((Date.now() - parseInt(lastTs, 10)) / 1000);
+              if (elapsedSec < COOLDOWN_SECONDS) {
+                startCooldownTimer(COOLDOWN_SECONDS - elapsedSec);
+              }
+            }
+          } catch (e) { }
+        }
+
+        // Validações visuais de campos individuais
+        function setFieldState(inputEl, errorEl, isValid) {
+          if (!inputEl) return;
+          if (!isValid) {
+            inputEl.classList.remove('border-transparent');
+            inputEl.classList.add('border-[#e97099]', 'bg-[#86214a]/20');
+            if (errorEl) errorEl.classList.remove('hidden');
+          } else {
+            inputEl.classList.remove('border-[#e97099]', 'bg-[#86214a]/20');
+            inputEl.classList.add('border-transparent');
+            if (errorEl) errorEl.classList.add('hidden');
+          }
+        }
+
+        // 5. Manipulação de Envio com Validação Estrita & Disparo mailto
+        function handleFormSubmit(event) {
+          event.preventDefault();
+
+          const honeypot = document.getElementById('honeypot_hp_field');
+          const nomeInput = document.getElementById('nome');
+          const emailInput = document.getElementById('email');
+          const projetoInput = document.getElementById('projeto-tipo');
+          const msgInput = document.getElementById('mensagem');
+          const submitBtn = document.getElementById('submit-btn');
+          const submitBtnText = document.getElementById('submit-btn-text');
+          const submitBtnIcon = document.getElementById('submit-btn-icon');
+          const alertBox = document.getElementById('form-alert');
+          const alertText = document.getElementById('form-alert-text');
+
+          // (c) Honeypot invisible trap
+          if (honeypot && honeypot.value.trim() !== '') {
+            // Robô detectado: bloqueio silencioso
+            return false;
+          }
+
+          // (b) Rate limiting check
+          if (isRateLimited()) {
+            if (alertBox && alertText) {
+              alertText.innerText = 'Limite temporário de mensagens atingido para prevenir sobrecarga. Por favor, aguarde alguns minutos ou entre em contato diretamente pelo WhatsApp/E-mail.';
+              alertBox.classList.remove('hidden');
+            }
+            showToast('Limite temporário atingido. Use o WhatsApp ou e-mail direto.', 'shield', 'bg-[#86214a]', 'text-[#ffb1c7]');
+            return false;
+          }
+
+          // 1. Validação Estrita de Todos os Campos
+          const valNome = nomeInput.value.trim();
+          const valEmail = emailInput.value.trim();
+          const valProjeto = projetoInput.value.trim();
+          const valMsg = msgInput.value.trim();
+
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          const isNomeValid = valNome.length >= 2;
+          const isEmailValid = emailRegex.test(valEmail);
+          const isProjetoValid = valProjeto !== '' && valProjeto !== 'Selecione uma modalidade...';
+          const isMsgValid = valMsg.length >= 10;
+
+          setFieldState(nomeInput, document.getElementById('err-nome'), isNomeValid);
+          setFieldState(emailInput, document.getElementById('err-email'), isEmailValid);
+          setFieldState(projetoInput, document.getElementById('err-projeto-tipo'), isProjetoValid);
+          setFieldState(msgInput, document.getElementById('err-mensagem'), isMsgValid);
+
+          if (!isNomeValid || !isEmailValid || !isProjetoValid || !isMsgValid) {
+            if (alertBox && alertText) {
+              alertText.innerText = 'Todos os campos são obrigatórios. Corrija os itens sinalizados em destaque antes de enviar.';
+              alertBox.classList.remove('hidden');
+            }
+            showToast('Por favor, preencha todos os campos obrigatórios corretamente.', 'warning', 'bg-[#86214a]', 'text-[#ffb1c7]');
+            return false;
+          }
+
+          // Campos válidos: esconde alerta
+          if (alertBox) alertBox.classList.add('hidden');
+
+          // (d) Prevenção de duplo clique acidental: desabilita imediatamente
+          submitBtn.disabled = true;
+          if (submitBtnText) submitBtnText.innerText = 'Verificando dados...';
+          if (submitBtnIcon) submitBtnIcon.innerText = 'sync';
+          submitBtnIcon.classList.add('animate-spin');
+
+          setTimeout(() => {
+            // Montagem estruturada do e-mail
+            const recipient = 'nathanmuricystudio@gmail.com';
+            const subject = `[PROJETO / CONTATO] ${valNome} - ${valProjeto}`;
+            const now = new Date();
+            const formattedDate = now.toLocaleString('pt-BR', { dateStyle: 'full', timeStyle: 'short' });
+
+            const bodyContent =
+              `Nome: ${valNome}
 E-mail: ${valEmail}
 Escopo: ${valProjeto}
 Detalhes da Proposta: ${valMsg}
 Data/Hora: ${formattedDate}`;
 
-        const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyContent)}`;
+            const mailtoUrl = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyContent)}`;
 
-        // Registro de Rate Limit
-        recordSubmission();
+            // Registro de Rate Limit
+            recordSubmission();
 
-        // Disparo do cliente de e-mail do usuário
-        try {
-          const mailWindow = window.open(mailtoUrl, '_blank');
-          if (!mailWindow || mailWindow.closed || typeof mailWindow.closed === 'undefined') {
-            window.location.href = mailtoUrl;
-          }
-        } catch (e) {
-          window.location.href = mailtoUrl;
+            // Disparo do cliente de e-mail do usuário
+            try {
+              const mailWindow = window.open(mailtoUrl, '_blank');
+              if (!mailWindow || mailWindow.closed || typeof mailWindow.closed === 'undefined') {
+                window.location.href = mailtoUrl;
+              }
+            } catch (e) {
+              window.location.href = mailtoUrl;
+            }
+
+            // Feedback de Sucesso
+            submitBtnIcon.classList.remove('animate-spin');
+            showToast('Mensagem processada! Abrindo cliente de e-mail para nathanmuricystudio@gmail.com', 'mark_email_read', 'bg-tertiary', 'text-on-tertiary');
+
+            // Limpeza do formulário
+            document.getElementById('contact-form').reset();
+            [nomeInput, emailInput, projetoInput, msgInput].forEach(el => {
+              el.classList.remove('border-[#e97099]', 'bg-[#86214a]/20');
+              el.classList.add('border-transparent');
+            });
+
+            // (a) Cooldown de 60 segundos com bloqueio regressivo
+            startCooldownTimer(COOLDOWN_SECONDS);
+          }, 750);
+
+          return false;
         }
 
-        // Feedback de Sucesso
-        submitBtnIcon.classList.remove('animate-spin');
-        showToast('Mensagem processada! Abrindo cliente de e-mail para nathanmuricystudio@gmail.com', 'mark_email_read', 'bg-tertiary', 'text-on-tertiary');
-
-        // Limpeza do formulário
-        document.getElementById('contact-form').reset();
-        [nomeInput, emailInput, projetoInput, msgInput].forEach(el => {
-          el.classList.remove('border-[#e97099]', 'bg-[#86214a]/20');
-          el.classList.add('border-transparent');
+        // Monitoramento em tempo real para remover erro ao digitar
+        ['nome', 'email', 'projeto-tipo', 'mensagem'].forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            el.addEventListener('input', () => {
+              el.classList.remove('border-[#e97099]', 'bg-[#86214a]/20');
+              el.classList.add('border-transparent');
+              const errEl = document.getElementById(`err-${id}`);
+              if (errEl) errEl.classList.add('hidden');
+              const alertBox = document.getElementById('form-alert');
+              if (alertBox) alertBox.classList.add('hidden');
+            });
+          }
         });
+      </script>
+    </div>
+  </main>
+  <footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-space-xl">
+    <div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl">
+      <div class="grid grid-cols-1 gap-gutter md:grid-cols-3 items-center">
+        <div class="flex flex-col gap-space-sm">
+          <div class="flex items-center gap-space-sm">
+            <div class="w-3 h-3 bg-tertiary shadow-[1px_1px_0px_#000000]"></div>
+            <div class="w-3 h-3 bg-secondary shadow-[1px_1px_0px_#000000]"></div>
+            <div class="w-3 h-3 bg-primary shadow-[1px_1px_0px_#000000]"></div><span
+              class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Nathan Muricy</span>
+          </div>
+          <p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Designer Gráfico e Programador
+            construindo pontes sólidas entre narrativa visual visceral e arquitetura de software rigorosa.</p>
+        </div>
+        <div class="flex flex-col gap-space-xs text-center items-center justify-center"><span
+            class="font-label-md text-label-md uppercase tracking-widest text-primary">Stack &amp;
+            Diretrizes</span><span class="font-body-sm text-body-sm text-outline">Neo-Brutalism • High Contrast • 8pt
+            Grid Discipline</span></div>
+        <div class="flex flex-col md:items-end text-left md:text-right gap-space-xs justify-center">
+          <div class="font-body-sm text-body-sm text-on-surface-variant tracking-wider">© 2026 Nathan Muricy. Todos os
+            direitos reservados.</div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div aria-hidden="true" id="snapdom-measure-slot"
+    style="position: absolute; left: -99999px; top: 0px; width: 0px; height: 0px; overflow: hidden; opacity: 0; pointer-events: none; contain: size layout style;">
+  </div>
 
-        // (a) Cooldown de 60 segundos com bloqueio regressivo
-        startCooldownTimer(COOLDOWN_SECONDS);
-      }, 750);
 
-      return false;
-    }
+</body>
 
-    // Monitoramento em tempo real para remover erro ao digitar
-    ['nome', 'email', 'projeto-tipo', 'mensagem'].forEach(id => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.addEventListener('input', () => {
-          el.classList.remove('border-[#e97099]', 'bg-[#86214a]/20');
-          el.classList.add('border-transparent');
-          const errEl = document.getElementById(`err-${id}`);
-          if (errEl) errEl.classList.add('hidden');
-          const alertBox = document.getElementById('form-alert');
-          if (alertBox) alertBox.classList.add('hidden');
-        });
-      }
-    });
-  </script>
-</div></main><footer class="w-full bg-surface-container-lowest text-on-surface-variant mt-space-xl"><div class="max-w-[1280px] mx-auto px-margin-mobile lg:px-margin py-space-xl"><div class="grid grid-cols-1 gap-gutter md:grid-cols-3 items-center"><div class="flex flex-col gap-space-sm"><div class="flex items-center gap-space-sm"><div class="w-3 h-3 bg-tertiary shadow-[1px_1px_0px_#000000]"></div><div class="w-3 h-3 bg-secondary shadow-[1px_1px_0px_#000000]"></div><div class="w-3 h-3 bg-primary shadow-[1px_1px_0px_#000000]"></div><span class="font-headline-sm text-headline-sm uppercase tracking-wide text-on-surface">Nathan Muricy</span></div><p class="font-body-sm text-body-sm text-on-surface-variant max-w-sm">Designer Gráfico e Programador construindo pontes sólidas entre narrativa visual visceral e arquitetura de software rigorosa.</p></div><div class="flex flex-col gap-space-xs text-center items-center justify-center"><span class="font-label-md text-label-md uppercase tracking-widest text-primary">Stack &amp; Diretrizes</span><span class="font-body-sm text-body-sm text-outline">Neo-Brutalism • High Contrast • 8pt Grid Discipline</span></div><div class="flex flex-col md:items-end text-left md:text-right gap-space-xs justify-center"><div class="font-body-sm text-body-sm text-on-surface-variant tracking-wider">© 2026 Nathan Muricy. Todos os direitos reservados.</div></div></div></div></footer>
-<div aria-hidden="true" id="snapdom-measure-slot" style="position: absolute; left: -99999px; top: 0px; width: 0px; height: 0px; overflow: hidden; opacity: 0; pointer-events: none; contain: size layout style;"></div>
-
-
-</body></html>
+</html>
